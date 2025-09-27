@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Sirajus Salayhin - Data Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #344e41;
+            --secondary: #3a5a40;
+            --accent: #588157;
+            --light: #a3b18a;
+            --lighter: #dad7cd;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: linear-gradient(135deg, var(--lighter) 0%, var(--white) 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--light);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        nav a:hover {
+            background: var(--secondary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero .title {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            animation: slideInRight 0.8s ease-out 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            animation: slideInRight 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Sections */
+        section {
+            margin: 4rem 0;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--light));
+            animation: expandWidth 0.8s ease-out;
+        }
+
+        @keyframes expandWidth {
+            from { width: 0; }
+            to { width: 100px; }
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
+            transition: all 0.3s ease;
+            animation: scaleIn 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(52, 78, 65, 0.2);
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: var(--light);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-item {
+            margin: 1rem 0;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            font-size: 0.95rem;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: var(--lighter);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--light));
+            border-radius: 5px;
+            animation: fillBar 1.5s ease-out;
+        }
+
+        @keyframes fillBar {
+            from { width: 0; }
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin-top: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent), var(--light));
+        }
+
+        .experience-item {
+            background: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
+            position: relative;
+            animation: slideInRight 0.6s ease-out;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+        }
+
+        .experience-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-meta {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-period {
+            color: var(--light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .experience-item li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Resume Section */
+        .resume-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
+        }
+
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+
+        .resume-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .education-item, .cert-item {
+            background: var(--lighter);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--accent);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .download-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .download-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(52, 78, 65, 0.15);
+        }
+
+        .contact-item a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .title {
+                font-size: 1.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            .experience-timeline {
+                padding-left: 2rem;
+            }
+
+            .experience-item::before {
+                left: -2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Key Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#resume">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="hero">
+            <h1>Md Sirajus Salayhin</h1>
+            <div class="title">Data Architect</div>
+            <p>14+ years of experience designing and delivering scalable, cost-effective data platforms on GCP and AWS. Expert in lakehouse architecture, dimensional modeling, and FinOps initiatives delivering up to 90% faster query performance and 60% cost savings.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Key Achievements & Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Modern Data Lakehouse Architecture</h3>
+                    <p>Directed design and implementation of a data lakehouse platform, establishing dbt Core standards with CI/CD integration. Improved data quality 30% and reduced pipeline maintenance 40%.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">dbt Core</span>
+                        <span class="tech-tag">Cloud Storage</span>
+                        <span class="tech-tag">Airflow</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>BigQuery Cost Optimization</h3>
+                    <p>Built comprehensive cost monitoring using system tables and Billing Export. Optimized queries and data models, cutting runtime 90%, bytes scanned 80%, and monthly costs 40%.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">FinOps</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Monitoring</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Dimensional Data Modeling</h3>
+                    <p>Engineered gold layer with star schema dimensional modeling, transforming raw events into optimized dim_ and fact_ tables. Improved query performance 70% and reduced scan volume 80%.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Star Schema</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">dbt</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>ML Pipeline Automation</h3>
+                    <p>Partnered with ML teams to build automated pipelines for feature engineering and batch inference using BigQuery, GCS, Dataproc, and Dataflow—cutting model iteration time 30%.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">Dataproc</span>
+                        <span class="tech-tag">Dataflow</span>
+                        <span class="tech-tag">ML</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Data Governance Framework</h3>
+                    <p>Spearheaded organization-wide data governance with contracts, tests, and SLAs. Implemented data lineage and centralized documentation, increasing data integrity 25%.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">dbt</span>
+                        <span class="tech-tag">Dataplex</span>
+                        <span class="tech-tag">GDPR</span>
+                        <span class="tech-tag">Data Lineage</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Scalable Analytics Ecosystem</h3>
+                    <p>Established comprehensive analytics platform using Dataproc, Dataflow, BigQuery, and Data Studio. Increased analytics capabilities 40% and reduced data retrieval times 50%.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Dataproc</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">Data Studio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages & Scripting</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>SQL</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 98%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Scala</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Platforms</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>BigQuery</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Apache Spark</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Apache Iceberg</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Orchestration & ELT</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>dbt Core</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Apache Airflow</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cloud Composer</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>GCP</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Terraform</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Docker/Kubernetes</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>BI & Analytics</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Tableau</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Looker</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Data Studio</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Architecture & Modeling</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Data Lakehouse</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Dimensional Modeling</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Data Governance</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3>Staff Data Engineer</h3>
+                    <div class="experience-meta">Zeals Co., Ltd | Tokyo, Japan</div>
+                    <div class="experience-period">November 2023 - Present</div>
+                    <ul>
+                        <li>Directed modern data lakehouse and analytics platform design, increasing data accessibility and accelerating decision-making</li>
+                        <li>Orchestrated dbt Core adoption with CI/CD integration, improving data quality 30% and reducing maintenance 40%</li>
+                        <li>Built BigQuery cost monitoring, cutting runtime 90%, bytes scanned 80%, and monthly costs 40%</li>
+                        <li>Engineered gold layer with dimensional modeling, improving query performance 70% and reducing scan volume 80%</li>
+                        <li>Delivered business-specific mart tables with strategic partitioning, cutting BigQuery costs 90%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Senior Big Data Engineer</h3>
+                    <div class="experience-meta">Zeals Co., Ltd | Tokyo, Japan</div>
+                    <div class="experience-period">November 2022 - October 2023</div>
+                    <ul>
+                        <li>Implemented data governance using Google Dataplex, improving efficiency by 20%</li>
+                        <li>Deployed CI/CD pipelines with Terraform, reducing manual intervention by 30%</li>
+                        <li>Designed FinOps pipeline using GCP billing exports, reducing infrastructure costs by 15%</li>
+                        <li>Built semantic analytics layer for customer-facing dashboard, improving data access speed by 20%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Senior Big Data Engineer (Remote)</h3>
+                    <div class="experience-meta">Zeals Co., Ltd | Tokyo, Japan</div>
+                    <div class="experience-period">May 2021 - October 2022</div>
+                    <ul>
+                        <li>Developed robust data lakehouse architecture on GCP using BigQuery and Cloud Storage</li>
+                        <li>Partnered with R&D and analytics teams supporting ML model development and BI dashboarding</li>
+                        <li>Audited and remediated data storage systems, strengthening security protocols</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Senior Data Engineer Level 2</h3>
+                    <div class="experience-meta">Pathao Ltd | Dhaka, Bangladesh</div>
+                    <div class="experience-period">June 2018 - May 2021</div>
+                    <ul>
+                        <li>Established scalable analytics ecosystem using Dataproc, Dataflow, and BigQuery, increasing capabilities by 40%</li>
+                        <li>Spearheaded data lake and warehouse development, reducing data retrieval times by 50%</li>
+                        <li>Enhanced data pipeline framework to handle 1,000+ attributes, boosting efficiency by 35%</li>
+                        <li>Designed scheduled reporting framework generating 10+ reports, improving productivity by 70%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Senior Data Engineer</h3>
+                    <div class="experience-meta">Augmedix Bangladesh Ltd. | Dhaka, Bangladesh</div>
+                    <div class="experience-period">June 2015 - March 2018</div>
+                    <ul>
+                        <li>Core contributor in designing data warehouse using SQL Server 2016, improving decision-making speed by 25%</li>
+                        <li>Integrated data pipeline framework ingesting from 3rd-party APIs and MySQL, processing 100+ attributes</li>
+                        <li>Developed reporting framework generating 20+ operational reports, increasing stakeholder access by 35%</li>
+                        <li>Built backend services serving millions of warehouse records, reducing data retrieval latency by 20%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Software Engineer</h3>
+                    <div class="experience-meta">Nascenia Ltd | Dhaka, Bangladesh</div>
+                    <div class="experience-period">June 2013 - May 2015</div>
+                    <ul>
+                        <li>Deployed B2B marketplace platform for farmers using Ruby on Rails and MySQL, increasing seller participation by 30%</li>
+                        <li>Built web-based tool for social media analytics and post scheduling, improving engagement by 40%</li>
+                        <li>Enhanced school management system, improving efficiency and reducing administrative workload by 35%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Software Engineer</h3>
+                    <div class="experience-meta">Right Brain Solution Ltd | Dhaka, Bangladesh</div>
+                    <div class="experience-period">November 2011 - May 2013</div>
+                    <ul>
+                        <li>Developed and deployed API for social media mobile apps, increasing user engagement by 20%</li>
+                        <li>Co-authored high-traffic automotive portal for Toronto Star, boosting monthly user visits by 35%</li>
+                        <li>Built multilingual B2C ski rental shop, increasing rentals by 20%</li>
+                        <li>Optimized OMR reader for university online exams, reducing manual data entry time by 95%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2>Education & Certifications</h2>
+            <div class="resume-content">
+                <div class="resume-section">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <strong>Post Graduate Diploma in ICT</strong><br>
+                        IICT, BUET | Dhaka, Bangladesh | 2019
+                    </div>
+                    <div class="education-item">
+                        <strong>B.Sc in Physics</strong><br>
+                        Jagannath University | Dhaka, Bangladesh | 2008
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Certifications</h3>
+                    <div class="cert-item">
+                        <strong>Data Engineering with Google Cloud Specialization</strong><br>
+                        Google Cloud Training (Coursera) | 2023
+                    </div>
+                    <div class="cert-item">
+                        <strong>Data Engineering, Big Data, and Machine Learning on GCP Specialization</strong><br>
+                        Google Cloud Training (Coursera) | 2023
+                    </div>
+                </div>
+                
+                <a href="#" class="download-btn"><span>📥 Download Full Resume</span></a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧 Email</strong><br>
+                    <a href="mailto:salayhin.lab@gmail.com">salayhin.lab@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>📱 Phone</strong><br>
+                    <a href="tel:+818069184753">+81-080-6918-4753</a>
+                </div>
+                <div class="contact-item">
+                    <strong>💼 LinkedIn</strong><br>
+                    <a href="https://linkedin.com/in/salayhin" target="_blank">linkedin.com/in/salayhin</a>
+                </div>
+                <div class="contact-item">
+                    <strong>💻 GitHub</strong><br>
+                    <a href="https://github.com/salayhin" target="_blank">github.com/salayhin</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Md Sirajus Salayhin. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Tokyo, Japan</p>
+    </footer>
+</body>
+</html>

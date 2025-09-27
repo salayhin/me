@@ -3,165 +3,946 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Sirajus Salayhin - Data Architect</title>
+
+    <title>Md Sirajus Salayhin | Data Architect Portfolio</title>
+
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Explore Md Sirajus Salayhin's portfolio featuring 14+ years in data engineering, lakehouse architecture, and analytics. Staff Data Engineer at Zeals Co., Ltd in Tokyo, Japan.">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Md Sirajus Salayhin | Data Architect Portfolio">
+    <meta property="og:description" content="Portfolio showcasing 14+ years of work in data engineering, lakehouse architecture, and cloud platforms.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Md Sirajus Salayhin | Data Architect Portfolio">
+    <meta name="twitter:description" content="Staff Data Engineer with expertise in GCP, BigQuery, and data lakehouse architecture.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
+        /* ======= CSS Variables ======= */
+        :root {
+            --primary-color: #4361ee;
+            --primary-color-rgb: 67, 97, 238;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --text-color: #333333;
+            --text-color-light: #666666;
+            --bg-color: #ffffff;
+            --bg-color-alt: #f9f9f9;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --success-color: #4caf50;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 5rem;
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 16px;
+            --border-radius-round: 50%;
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        .dark-theme {
+            --primary-color: #4895ef;
+            --primary-color-rgb: 72, 149, 239;
+            --secondary-color: #3f8efc;
+            --accent-color: #5390d9;
+            --text-color: #e0e0e0;
+            --text-color-light: #b0b0b0;
+            --bg-color: #121212;
+            --bg-color-alt: #1e1e1e;
+            --card-bg: #2a2a2a;
+            --border-color: #444444;
+            --shadow-color: rgba(0, 0, 0, 0.5);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #344e41;
-            --secondary: #3a5a40;
-            --accent: #588157;
-            --light: #a3b18a;
-            --lighter: #dad7cd;
-            --white: #ffffff;
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
-            color: var(--primary);
-            background: linear-gradient(135deg, var(--lighter) 0%, var(--white) 100%);
-            min-height: 100vh;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+            overflow-x: hidden;
         }
 
-        /* Navigation */
-        nav {
-            background: var(--primary);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            animation: slideDown 0.5s ease-out;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
         }
 
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: var(--white);
+        a {
             text-decoration: none;
+            color: var(--primary-color);
+            transition: color var(--transition-fast);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        p {
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-color-light);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+
+        .section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-color);
+        }
+
+        .underline {
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 0 auto;
+            margin-top: var(--spacing-xs);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius-sm);
             font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            transition: all var(--transition-fast);
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all var(--transition-normal);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dark-theme .header {
+            background-color: rgba(18, 18, 18, 0.95);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .nav-logo a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color var(--transition-fast);
             position: relative;
         }
 
-        nav a::after {
+        .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
             width: 0;
             height: 2px;
-            background: var(--light);
-            transition: all 0.3s ease;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--primary-color);
+            transition: all var(--transition-fast);
             transform: translateX(-50%);
         }
 
-        nav a:hover::after {
-            width: 80%;
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
-        nav a:hover {
-            background: var(--secondary);
+        .nav-links a:hover {
+            color: var(--primary-color);
         }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
+        .theme-toggle {
+            margin-left: 1rem;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 25px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "🌙";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        input:checked + .slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(25px);
+            content: "☀️";
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-color-alt) 100%);
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-greeting {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .hero-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+            color: var(--text-color-light);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-color-light);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-round);
+            color: var(--text-color);
+            font-size: 1.2rem;
+            transition: all var(--transition-fast);
+            box-shadow: 0 2px 10px var(--shadow-color);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow-color);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            animation: fadeInRight 1s ease 0.5s both;
+        }
+
+        .profile-image-container {
+            width: 300px;
+            height: 300px;
+            border-radius: var(--border-radius-round);
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            position: relative;
+        }
+
+        .profile-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 6rem;
+        }
+
+        .profile-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-down a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .about {
+            background-color: var(--bg-color-alt);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image-placeholder {
+            width: 250px;
+            height: 250px;
+            border-radius: var(--border-radius-round);
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-details {
+            margin-top: 2rem;
+        }
+
+        .detail-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-md);
+            box-shadow: 0 2px 10px var(--shadow-color);
+            transition: transform var(--transition-fast);
+        }
+
+        .detail-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .detail-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius-round);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .detail-content h4 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-content p {
+            font-size: 0.9rem;
+            color: var(--text-color-light);
+        }
+
+        .resume-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .resume-download {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-color);
+        }
+
+        .resume-download p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text-color-light);
+        }
+
+        .resume-highlights {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-color);
+        }
+
+        .resume-highlights h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .resume-highlights ul {
+            list-style: none;
+        }
+
+        .resume-highlights li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--text-color-light);
+        }
+
+        .resume-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .experience {
+            background-color: var(--bg-color-alt);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
             margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--primary-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 3rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 3rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 2rem;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-color);
+            transition: transform var(--transition-fast);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-header h3 {
+            color: var(--primary-color);
+            margin-bottom: 0;
+        }
+
+        .timeline-date {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .timeline-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .timeline-skills li {
+            background-color: var(--bg-color-alt);
+            color: var(--text-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow-color);
+            transition: all var(--transition-fast);
+            border: 1px solid var(--border-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .project-image {
+            height: 150px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .project-content {
             padding: 2rem;
         }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            animation: slideInLeft 0.8s ease-out;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero .title {
-            font-size: 1.5rem;
-            color: var(--accent);
+        .project-content h3 {
+            color: var(--text-color);
             margin-bottom: 1rem;
-            font-weight: 600;
-            animation: slideInRight 0.8s ease-out 0.2s both;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--secondary);
-            max-width: 800px;
-            margin: 0 auto;
-            animation: slideInRight 0.8s ease-out 0.4s both;
+        .project-content p {
+            color: var(--text-color-light);
+            margin-bottom: 1.5rem;
         }
 
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* Sections */
-        section {
-            margin: 4rem 0;
-            animation: fadeInUp 0.8s ease-out;
+        .tech-tag {
+            background-color: var(--bg-color-alt);
+            color: var(--text-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+
+        .project-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .skills {
+            background-color: var(--bg-color-alt);
+        }
+
+        .skills-content {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .skills-category {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-color);
+        }
+
+        .skills-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: var(--bg-color-alt);
+            border-radius: var(--border-radius-md);
+            transition: all var(--transition-fast);
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .skill-item i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            transition: color var(--transition-fast);
+        }
+
+        .skill-item:hover i {
+            color: white;
+        }
+
+        .skill-item span {
+            font-weight: 500;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius-md);
+            box-shadow: 0 2px 10px var(--shadow-color);
+        }
+
+        .contact-item i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius-round);
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .footer {
+            background-color: var(--bg-color-alt);
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-text p {
+            color: var(--text-color-light);
+            margin: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-color-light);
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
         }
 
         @keyframes fadeInUp {
@@ -175,782 +956,703 @@
             }
         }
 
-        h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--light));
-            animation: expandWidth 0.8s ease-out;
-        }
-
-        @keyframes expandWidth {
-            from { width: 0; }
-            to { width: 100px; }
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
-            transition: all 0.3s ease;
-            animation: scaleIn 0.5s ease-out;
-            animation-fill-mode: both;
-        }
-
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.2s; }
-        .project-card:nth-child(3) { animation-delay: 0.3s; }
-        .project-card:nth-child(4) { animation-delay: 0.4s; }
-        .project-card:nth-child(5) { animation-delay: 0.5s; }
-        .project-card:nth-child(6) { animation-delay: 0.6s; }
-
-        @keyframes scaleIn {
+        @keyframes fadeInRight {
             from {
                 opacity: 0;
-                transform: scale(0.8);
+                transform: translateX(30px);
             }
             to {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateX(0);
             }
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(52, 78, 65, 0.2);
-        }
-
-        .project-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-tag {
-            background: var(--light);
-            color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-
-        /* Skills Section */
-        .skills-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .skill-category {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
-        }
-
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .skill-item {
-            margin: 1rem 0;
-        }
-
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-            font-size: 0.95rem;
-        }
-
-        .skill-bar {
-            height: 10px;
-            background: var(--lighter);
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent), var(--light));
-            border-radius: 5px;
-            animation: fillBar 1.5s ease-out;
-        }
-
-        @keyframes fillBar {
-            from { width: 0; }
-        }
-
-        /* Experience Section */
-        .experience-timeline {
-            position: relative;
-            padding-left: 3rem;
-            margin-top: 2rem;
-        }
-
-        .experience-timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, var(--accent), var(--light));
-        }
-
-        .experience-item {
-            background: var(--white);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
-            position: relative;
-            animation: slideInRight 0.6s ease-out;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -3rem;
-            top: 2rem;
-            width: 15px;
-            height: 15px;
-            background: var(--accent);
-            border-radius: 50%;
-            border: 3px solid var(--white);
-        }
-
-        .experience-item h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-meta {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-period {
-            color: var(--light);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .experience-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .experience-item li {
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-        }
-
-        .experience-item li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Resume Section */
-        .resume-content {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
-        }
-
-        .resume-section {
-            margin-bottom: 2rem;
-        }
-
-        .resume-section h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .education-item, .cert-item {
-            background: var(--lighter);
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-            border-left: 4px solid var(--accent);
-        }
-
-        .download-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .download-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: var(--accent);
-            transform: translate(-50%, -50%);
-            transition: width 0.5s, height 0.5s;
-        }
-
-        .download-btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .download-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .download-btn span {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Contact Section */
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(52, 78, 65, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(52, 78, 65, 0.15);
-        }
-
-        .contact-item a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            color: var(--accent);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
             }
-            
-            .hero .title {
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .hero-title {
                 font-size: 1.2rem;
             }
-            
-            .hero p {
-                font-size: 1rem;
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
             }
-            
-            h2 {
+
+            .detail-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .resume-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 4rem;
+                padding-right: 2rem;
+            }
+
+            .timeline-dot {
+                left: 10px !important;
+                right: auto !important;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .hero-cta .btn {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                width: 95%;
+                padding: 0 0.5rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title {
                 font-size: 2rem;
             }
 
-            .experience-timeline {
-                padding-left: 2rem;
+            .hero-name {
+                font-size: 2rem;
             }
 
-            .experience-item::before {
-                left: -2.5rem;
+            .profile-image-container,
+            .about-image-placeholder {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-placeholder {
+                font-size: 4rem;
+            }
+
+            .about-image-placeholder {
+                font-size: 3.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 0.5rem;
+            }
+
+            .skill-item {
+                padding: 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitch = document.getElementById('theme-switch');
+            const body = document.body;
+            
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-theme');
+                themeSwitch.checked = true;
+            }
+            
+            themeSwitch.addEventListener('change', function() {
+                if (this.checked) {
+                    body.classList.add('dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.classList.remove('dark-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Key Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#resume">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <div class="container">
-        <section id="home" class="hero">
-            <h1>Md Sirajus Salayhin</h1>
-            <div class="title">Data Architect</div>
-            <p>14+ years of experience designing and delivering scalable, cost-effective data platforms on GCP and AWS. Expert in lakehouse architecture, dimensional modeling, and FinOps initiatives delivering up to 90% faster query performance and 60% cost savings.</p>
-        </section>
+<body class="light-theme">
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="nav-logo">
+                        <a href="#home">Sirajus Salayhin</a>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="theme-switch">
+                        <label for="theme-switch" class="switch">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <section id="projects">
-            <h2>Key Achievements & Projects</h2>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Md Sirajus Salayhin</h1>
+                    <h2 class="hero-title">Data Architect & Staff Data Engineer</h2>
+                    <p class="hero-description">14+ years of experience designing and delivering scalable, cost-effective data platforms on GCP and AWS. Expert in lakehouse architecture, dimensional modeling, and FinOps initiatives delivering up to 90% faster query performance and 60% cost savings.</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View My Work</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/salayhin" class="social-link" aria-label="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/salayhin" class="social-link" aria-label="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:salayhin.lab@gmail.com" class="social-link" aria-label="Email" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image-container">
+                        <div class="profile-placeholder">
+                            <img src="profile-photo.jpg" alt="Md Sirajus Salayhin" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about" aria-label="Scroll down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-title">About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>My Journey in Data Engineering</h3>
+                    <p>I am a Staff Data Engineer with over 14 years of experience building robust data platforms, implementing lakehouse architectures, and creating scalable data solutions. My expertise lies in transforming complex datasets into valuable business insights through innovative engineering solutions on GCP and AWS.</p>
+                    <p>With a strong background in data warehousing, cloud platforms, and big data technologies, I specialize in designing and implementing data solutions that drive business growth. I'm proficient in modern data stack technologies including dbt Core, BigQuery, Apache Spark, and passionate about leveraging data to solve real-world problems.</p>
+                    <p>My approach combines technical excellence with business acumen to deliver solutions that are both technically sound and commercially viable. I have led initiatives that achieved up to 90% faster query performance and 60% cost savings through strategic optimization.</p>
+                    <div class="about-details">
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-database"></i></span>
+                                <div class="detail-content">
+                                    <h4>Data Lakehouse Architecture</h4>
+                                    <p>Expert in designing modern data lakehouse platforms with dbt Core and dimensional modeling</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-cloud"></i></span>
+                                <div class="detail-content">
+                                    <h4>Cloud Platforms</h4>
+                                    <p>Extensive experience with GCP (BigQuery, Dataproc, Dataflow) and AWS services</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-chart-line"></i></span>
+                                <div class="detail-content">
+                                    <h4>FinOps & Optimization</h4>
+                                    <p>Proven track record in cost optimization achieving 40-60% cost reductions</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon"><i class="fas fa-code"></i></span>
+                                <div class="detail-content">
+                                    <h4>Programming</h4>
+                                    <p>Python, SQL, Scala, and modern data engineering tools</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume section" id="resume">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-title">Resume</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="resume-content">
+                <div class="resume-download">
+                    <p>Download my complete resume to learn more about my experience and qualifications.</p>
+                    <a href="#" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+                <div class="resume-preview">
+                    <div class="resume-highlights">
+                        <h3>Key Highlights</h3>
+                        <ul>
+                            <li>14+ years of experience in data engineering and analytics</li>
+                            <li>Expert in Python, SQL, Scala, and big data technologies</li>
+                            <li>Proven track record in cloud-based data solutions (GCP, AWS)</li>
+                            <li>Strong background in data lakehouse and warehouse design</li>
+                            <li>Certified in Google Cloud Data Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-title">Experience</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Staff Data Engineer</h3>
+                            <span class="timeline-date">Nov 2023 - Present</span>
+                        </div>
+                        <h4>Zeals Co., Ltd | Tokyo, Japan</h4>
+                        <p>Directed design and implementation of modern data lakehouse and analytics platform. Orchestrated dbt Core adoption with CI/CD integration, improving data quality 30% and reducing maintenance 40%. Built BigQuery cost monitoring, cutting runtime 90% and monthly costs 40%.</p>
+                        <ul class="timeline-skills">
+                            <li>BigQuery</li>
+                            <li>dbt Core</li>
+                            <li>Python</li>
+                            <li>Airflow</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Big Data Engineer</h3>
+                            <span class="timeline-date">Nov 2022 - Oct 2023</span>
+                        </div>
+                        <h4>Zeals Co., Ltd | Tokyo, Japan</h4>
+                        <p>Implemented data governance using Google Dataplex, improving efficiency by 20%. Deployed CI/CD pipelines with Terraform, reducing manual intervention by 30%. Designed FinOps pipeline reducing infrastructure costs by 15%.</p>
+                        <ul class="timeline-skills">
+                            <li>Dataplex</li>
+                            <li>Terraform</li>
+                            <li>GCP</li>
+                            <li>FinOps</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Data Engineer Level 2</h3>
+                            <span class="timeline-date">Jun 2018 - May 2021</span>
+                        </div>
+                        <h4>Pathao Ltd | Dhaka, Bangladesh</h4>
+                        <p>Established scalable analytics ecosystem using Dataproc, Dataflow, and BigQuery, increasing capabilities by 40%. Spearheaded data lake development, reducing retrieval times by 50%.</p>
+                        <ul class="timeline-skills">
+                            <li>Dataproc</li>
+                            <li>BigQuery</li>
+                            <li>Dataflow</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-title">Projects</h2>
+                <div class="underline"></div>
+            </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Modern Data Lakehouse Architecture</h3>
-                    <p>Directed design and implementation of a data lakehouse platform, establishing dbt Core standards with CI/CD integration. Improved data quality 30% and reduced pipeline maintenance 40%.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">BigQuery</span>
-                        <span class="tech-tag">dbt Core</span>
-                        <span class="tech-tag">Cloud Storage</span>
-                        <span class="tech-tag">Airflow</span>
+                    <div class="project-image">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Lakehouse Architecture</h3>
+                        <p>Directed design and implementation of modern data lakehouse platform with dbt Core standards and CI/CD integration, improving data quality 30%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">dbt Core</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">GCP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>BigQuery Cost Optimization</h3>
-                    <p>Built comprehensive cost monitoring using system tables and Billing Export. Optimized queries and data models, cutting runtime 90%, bytes scanned 80%, and monthly costs 40%.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">BigQuery</span>
-                        <span class="tech-tag">FinOps</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Monitoring</span>
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>BigQuery Cost Optimization</h3>
+                        <p>Built comprehensive cost monitoring system cutting runtime 90%, bytes scanned 80%, and monthly costs 40% through query and data model optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">FinOps</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Monitoring</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Dimensional Data Modeling</h3>
-                    <p>Engineered gold layer with star schema dimensional modeling, transforming raw events into optimized dim_ and fact_ tables. Improved query performance 70% and reduced scan volume 80%.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Star Schema</span>
-                        <span class="tech-tag">BigQuery</span>
-                        <span class="tech-tag">dbt</span>
+                    <div class="project-image">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dimensional Data Modeling</h3>
+                        <p>Engineered gold layer with star schema, transforming raw events into optimized dim_ and fact_ tables, improving query performance 70%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Star Schema</span>
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">dbt</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>ML Pipeline Automation</h3>
-                    <p>Partnered with ML teams to build automated pipelines for feature engineering and batch inference using BigQuery, GCS, Dataproc, and Dataflow—cutting model iteration time 30%.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">BigQuery</span>
-                        <span class="tech-tag">Dataproc</span>
-                        <span class="tech-tag">Dataflow</span>
-                        <span class="tech-tag">ML</span>
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
                     </div>
-                </div>
-                <div class="project-card">
-                    <h3>Data Governance Framework</h3>
-                    <p>Spearheaded organization-wide data governance with contracts, tests, and SLAs. Implemented data lineage and centralized documentation, increasing data integrity 25%.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">dbt</span>
-                        <span class="tech-tag">Dataplex</span>
-                        <span class="tech-tag">GDPR</span>
-                        <span class="tech-tag">Data Lineage</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Scalable Analytics Ecosystem</h3>
-                    <p>Established comprehensive analytics platform using Dataproc, Dataflow, BigQuery, and Data Studio. Increased analytics capabilities 40% and reduced data retrieval times 50%.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Dataproc</span>
-                        <span class="tech-tag">BigQuery</span>
-                        <span class="tech-tag">Data Studio</span>
+                    <div class="project-content">
+                        <h3>ML Pipeline Automation</h3>
+                        <p>Built automated pipelines for feature engineering and batch inference, cutting model iteration time 30%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Dataproc</span>
+                            <span class="tech-tag">Dataflow</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
                     <h3>Languages & Scripting</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
                             <span>Python</span>
-                            <span>95%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
                             <span>SQL</span>
-                            <span>98%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 98%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
                             <span>Scala</span>
-                            <span>85%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Bash</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Data Platforms</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
+
+                <div class="skills-category">
+                    <h3>Data Platforms & Storage</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
                             <span>BigQuery</span>
-                            <span>95%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
                             <span>Apache Spark</span>
-                            <span>90%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fas fa-cube"></i>
                             <span>Apache Iceberg</span>
-                            <span>85%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>HDFS</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
+
+                <div class="skills-category">
                     <h3>Orchestration & ELT</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
                             <span>dbt Core</span>
-                            <span>95%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fas fa-wind"></i>
                             <span>Apache Airflow</span>
-                            <span>90%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
                             <span>Cloud Composer</span>
-                            <span>88%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>GCP</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Terraform</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Docker/Kubernetes</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                        <div class="skill-item">
+                            <i class="fas fa-stream"></i>
+                            <span>Pub/Sub</span>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>BI & Analytics</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
+
+                <div class="skills-category">
+                    <h3>Cloud Platforms</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-google"></i>
+                            <span>Google Cloud (GCP)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>Amazon AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Microsoft Azure</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Snowflake</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>BI & Visualization</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
                             <span>Tableau</span>
-                            <span>88%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
                             <span>Looker</span>
-                            <span>85%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-area"></i>
                             <span>Data Studio</span>
-                            <span>90%</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Architecture & Modeling</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Data Lakehouse</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Dimensional Modeling</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Data Governance</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Redash</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <h3>Staff Data Engineer</h3>
-                    <div class="experience-meta">Zeals Co., Ltd | Tokyo, Japan</div>
-                    <div class="experience-period">November 2023 - Present</div>
-                    <ul>
-                        <li>Directed modern data lakehouse and analytics platform design, increasing data accessibility and accelerating decision-making</li>
-                        <li>Orchestrated dbt Core adoption with CI/CD integration, improving data quality 30% and reducing maintenance 40%</li>
-                        <li>Built BigQuery cost monitoring, cutting runtime 90%, bytes scanned 80%, and monthly costs 40%</li>
-                        <li>Engineered gold layer with dimensional modeling, improving query performance 70% and reducing scan volume 80%</li>
-                        <li>Delivered business-specific mart tables with strategic partitioning, cutting BigQuery costs 90%</li>
-                    </ul>
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in discussing new opportunities, challenging projects, and innovative data solutions. Feel free to reach out if you'd like to collaborate or just want to connect!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>salayhin.lab@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+81-080-6918-4753</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tokyo, Japan</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://linkedin.com/in/salayhin" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/salayhin" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:salayhin.lab@gmail.com" class="social-link" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="experience-item">
-                    <h3>Senior Big Data Engineer</h3>
-                    <div class="experience-meta">Zeals Co., Ltd | Tokyo, Japan</div>
-                    <div class="experience-period">November 2022 - October 2023</div>
-                    <ul>
-                        <li>Implemented data governance using Google Dataplex, improving efficiency by 20%</li>
-                        <li>Deployed CI/CD pipelines with Terraform, reducing manual intervention by 30%</li>
-                        <li>Designed FinOps pipeline using GCP billing exports, reducing infrastructure costs by 15%</li>
-                        <li>Built semantic analytics layer for customer-facing dashboard, improving data access speed by 20%</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Senior Big Data Engineer (Remote)</h3>
-                    <div class="experience-meta">Zeals Co., Ltd | Tokyo, Japan</div>
-                    <div class="experience-period">May 2021 - October 2022</div>
-                    <ul>
-                        <li>Developed robust data lakehouse architecture on GCP using BigQuery and Cloud Storage</li>
-                        <li>Partnered with R&D and analytics teams supporting ML model development and BI dashboarding</li>
-                        <li>Audited and remediated data storage systems, strengthening security protocols</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Senior Data Engineer Level 2</h3>
-                    <div class="experience-meta">Pathao Ltd | Dhaka, Bangladesh</div>
-                    <div class="experience-period">June 2018 - May 2021</div>
-                    <ul>
-                        <li>Established scalable analytics ecosystem using Dataproc, Dataflow, and BigQuery, increasing capabilities by 40%</li>
-                        <li>Spearheaded data lake and warehouse development, reducing data retrieval times by 50%</li>
-                        <li>Enhanced data pipeline framework to handle 1,000+ attributes, boosting efficiency by 35%</li>
-                        <li>Designed scheduled reporting framework generating 10+ reports, improving productivity by 70%</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Senior Data Engineer</h3>
-                    <div class="experience-meta">Augmedix Bangladesh Ltd. | Dhaka, Bangladesh</div>
-                    <div class="experience-period">June 2015 - March 2018</div>
-                    <ul>
-                        <li>Core contributor in designing data warehouse using SQL Server 2016, improving decision-making speed by 25%</li>
-                        <li>Integrated data pipeline framework ingesting from 3rd-party APIs and MySQL, processing 100+ attributes</li>
-                        <li>Developed reporting framework generating 20+ operational reports, increasing stakeholder access by 35%</li>
-                        <li>Built backend services serving millions of warehouse records, reducing data retrieval latency by 20%</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Software Engineer</h3>
-                    <div class="experience-meta">Nascenia Ltd | Dhaka, Bangladesh</div>
-                    <div class="experience-period">June 2013 - May 2015</div>
-                    <ul>
-                        <li>Deployed B2B marketplace platform for farmers using Ruby on Rails and MySQL, increasing seller participation by 30%</li>
-                        <li>Built web-based tool for social media analytics and post scheduling, improving engagement by 40%</li>
-                        <li>Enhanced school management system, improving efficiency and reducing administrative workload by 35%</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Software Engineer</h3>
-                    <div class="experience-meta">Right Brain Solution Ltd | Dhaka, Bangladesh</div>
-                    <div class="experience-period">November 2011 - May 2013</div>
-                    <ul>
-                        <li>Developed and deployed API for social media mobile apps, increasing user engagement by 20%</li>
-                        <li>Co-authored high-traffic automotive portal for Toronto Star, boosting monthly user visits by 35%</li>
-                        <li>Built multilingual B2C ski rental shop, increasing rentals by 20%</li>
-                        <li>Optimized OMR reader for university online exams, reducing manual data entry time by 95%</li>
-                    </ul>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="resume">
-            <h2>Education & Certifications</h2>
-            <div class="resume-content">
-                <div class="resume-section">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <strong>Post Graduate Diploma in ICT</strong><br>
-                        IICT, BUET | Dhaka, Bangladesh | 2019
-                    </div>
-                    <div class="education-item">
-                        <strong>B.Sc in Physics</strong><br>
-                        Jagannath University | Dhaka, Bangladesh | 2008
-                    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Md Sirajus Salayhin. All rights reserved.</p>
                 </div>
-
-                <div class="resume-section">
-                    <h3>Certifications</h3>
-                    <div class="cert-item">
-                        <strong>Data Engineering with Google Cloud Specialization</strong><br>
-                        Google Cloud Training (Coursera) | 2023
-                    </div>
-                    <div class="cert-item">
-                        <strong>Data Engineering, Big Data, and Machine Learning on GCP Specialization</strong><br>
-                        Google Cloud Training (Coursera) | 2023
-                    </div>
-                </div>
-                
-                <a href="#" class="download-btn"><span>📥 Download Full Resume</span></a>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📧 Email</strong><br>
-                    <a href="mailto:salayhin.lab@gmail.com">salayhin.lab@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <strong>📱 Phone</strong><br>
-                    <a href="tel:+818069184753">+81-080-6918-4753</a>
-                </div>
-                <div class="contact-item">
-                    <strong>💼 LinkedIn</strong><br>
-                    <a href="https://linkedin.com/in/salayhin" target="_blank">linkedin.com/in/salayhin</a>
-                </div>
-                <div class="contact-item">
-                    <strong>💻 GitHub</strong><br>
-                    <a href="https://github.com/salayhin" target="_blank">github.com/salayhin</a>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Md Sirajus Salayhin. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Tokyo, Japan</p>
+        </div>
     </footer>
 </body>
 </html>

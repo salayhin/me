@@ -150,92 +150,317 @@
         </div>
     </section>
 
-    <section class="resume section" id="resume">
-        <div class="container">
-            <div class="section-heading">
-                <h2 class="section-title">Resume</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="resume-content">
-                <div class="resume-download">
-                    <p>Download my complete resume to learn more about my experience and qualifications.</p>
-                    <a href="resume/Md_sirajus_Salayhin_Data_Engineer.pdf" class="btn btn-primary" target="_blank">
-                        <i class="fas fa-download"></i>
-                        Download Resume
-                    </a>
-                </div>
-                <div class="resume-preview">
-                    <div class="resume-highlights">
-                        <h3>Key Highlights</h3>
-                        <ul>
-                            <li>14+ years of experience in data engineering and analytics</li>
-                            <li>Expert in Python, SQL, Scala, and big data technologies</li>
-                            <li>Proven track record in cloud-based data solutions (GCP, AWS)</li>
-                            <li>Strong background in data lakehouse and warehouse design</li>
-                            <li>Certified in Google Cloud Data Engineering</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="experience section" id="experience">
+<section class="experience section" id="experience">
         <div class="container">
             <div class="section-heading">
                 <h2 class="section-title">Experience</h2>
                 <div class="underline"></div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Staff Data Engineer</h3>
-                            <span class="timeline-date">Nov 2023 - Present</span>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Staff Data Engineer</h3>
+                                <h4>Zeals Co., Ltd</h4>
+                                <div class="location-date">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> Nov 2023 - Present</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Zeals Co., Ltd | Tokyo, Japan</h4>
-                        <p>Directed design and implementation of modern data lakehouse and analytics platform. Orchestrated dbt Core adoption with CI/CD integration, improving data quality 30% and reducing maintenance 40%. Built BigQuery cost monitoring, cutting runtime 90% and monthly costs 40%.</p>
-                        <ul class="timeline-skills">
-                            <li>BigQuery</li>
-                            <li>dbt Core</li>
-                            <li>Python</li>
-                            <li>Airflow</li>
-                        </ul>
+                        <div class="experience-status">
+                            <span class="status-badge current">Current</span>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="achievements">
+                            <div class="achievement">
+                                <span>Directed the design and implementation of a modern data lakehouse and analytics platform, increasing data accessibility and accelerating decision-making</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Orchestrated organization-wide adoption of dbt Core, establishing modeling/testing standards and CI/CD integration that improved data quality 30% and reduced pipeline maintenance 40%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Built BigQuery cost monitoring (system tables + Billing Export) to track spend by query/team and flag hotspots; used those insights to optimize queries, cutting runtime 90%, bytes scanned 80%, per-query costs up to 95%, and monthly costs 40%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Engineered the gold layer with dimensional modeling (star schema), transforming raw events into optimized dim_ and fact_ tables, improving query performance 70% and reducing scan volume 80%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Delivered business-specific mart_ tables for self-service analytics, cutting BigQuery costs 90% via strategic partitioning, clustering, and materialization</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Optimized high-cost queries (restructuring joins, pruning scans, refactoring UDFs), reducing runtime 90%, bytes scanned 80%, and query costs 95%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Instituted data lineage and a centralized data dictionary via dbt documentation/metadata, enabling clear traceability from source to marts and boosting stakeholder trust and self-service adoption</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Spearheaded organization-wide data governance and quality practices (contracts, tests, SLAs), increasing data integrity and accuracy 25%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Built a GCP Asset Inventory–based utilization monitor across GCP components with automated alerts and rightsizing policies</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Partnered with ML teams to build automated pipelines for feature engineering and batch inference using BigQuery, GCS, Dataproc, and Dataflow—cutting model iteration time 30%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Mentored junior engineers, driving a 20% uplift in technical proficiency and fostering a culture of continuous learning</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Improved cross-functional collaboration (engineering, data science, product), increasing project delivery efficiency 15%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Implemented GDPR-aligned security controls (access policies, encryption, retention), reducing breach risk 20% and ensuring regulatory compliance</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">dbt Core</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Airflow</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Senior Big Data Engineer</h3>
-                            <span class="timeline-date">Nov 2022 - Oct 2023</span>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Senior Big Data Engineer</h3>
+                                <h4>Zeals Co., Ltd</h4>
+                                <div class="location-date">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> Nov 2022 - Oct 2023</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Zeals Co., Ltd | Tokyo, Japan</h4>
-                        <p>Implemented data governance using Google Dataplex, improving efficiency by 20%. Deployed CI/CD pipelines with Terraform, reducing manual intervention by 30%. Designed FinOps pipeline reducing infrastructure costs by 15%.</p>
-                        <ul class="timeline-skills">
-                            <li>Dataplex</li>
-                            <li>Terraform</li>
-                            <li>GCP</li>
-                            <li>FinOps</li>
-                        </ul>
+                    </div>
+                    <div class="experience-content">
+                        <div class="achievements">
+                            <div class="achievement">
+                                <span>Implemented data governance using Google Dataplex, improving data management efficiency by 20% and ensuring compliance with internal and external standards</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Deployed CI/CD pipelines with Terraform, automating data workflows, reducing manual intervention by 30%, and increasing infrastructure reliability</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Designed and rolled out a FinOps pipeline using GCP billing exports, reducing infrastructure costs by 15% through proactive cost monitoring</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Built a semantic analytics layer for a customer-facing dashboard, improving data access speed by 20% and enhancing overall user experience</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Integrated BI tools (e.g., Tableau) with the Data Lakehouse Gold layer, enabling real-time insights and improving decision-making for business stakeholders by 25%</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Dataplex</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">GCP</span>
+                            <span class="tech-tag">FinOps</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Senior Data Engineer Level 2</h3>
-                            <span class="timeline-date">Jun 2018 - May 2021</span>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Senior Data Engineer Level 2</h3>
+                                <h4>Pathao Ltd</h4>
+                                <div class="location-date">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> Jun 2018 - May 2021</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Pathao Ltd | Dhaka, Bangladesh</h4>
-                        <p>Established scalable analytics ecosystem using Dataproc, Dataflow, and BigQuery, increasing capabilities by 40%. Spearheaded data lake development, reducing retrieval times by 50%.</p>
-                        <ul class="timeline-skills">
-                            <li>Dataproc</li>
-                            <li>BigQuery</li>
-                            <li>Dataflow</li>
-                            <li>Python</li>
-                        </ul>
+                    </div>
+                    <div class="experience-content">
+                        <div class="achievements">
+                            <div class="achievement">
+                                <span>Established a scalable analytics ecosystem using Google Dataproc, Google Dataflow, BigQuery, and Data Studio, increasing analytics capabilities by 40%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Spearheaded the development of a data lake and warehouse in Google Cloud Storage and BigQuery, reducing data retrieval times by 50%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Enhanced the data pipeline framework to handle over 1,000 attributes, boosting data processing efficiency by 35%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Designed and implemented a scheduled reporting framework on the data warehouse, generating 10+ financial and operational reports, improving team productivity by 70%</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Dataproc</span>
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Dataflow</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Senior Big Data Engineer (Remote)</h3>
+                                <h4>Zeals Co., Ltd</h4>
+                                <div class="location-date">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> May 2021 - Oct 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="achievements">
+                            <div class="achievement">
+                                <span>Developed a robust data lakehouse architecture on GCP using BigQuery and Cloud Storage, improving data scalability and accessibility for internal stakeholders</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Partnered with R&D and analytics teams to support ML model development and BI dashboarding, driving a 20% improvement in data-driven decision-making</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Audited and remediated data storage systems in collaboration with the security team, strengthening data security protocols</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Cloud Storage</span>
+                            <span class="tech-tag">GCP</span>
+                            <span class="tech-tag">ML Pipelines</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Senior Data Engineer</h3>
+                                <h4>Augmedix Bangladesh Ltd.</h4>
+                                <div class="location-date">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> Jun 2015 - Mar 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="achievements">
+                            <div class="achievement">
+                                <span>Served as a core contributor in designing and building a data warehouse using SQL Server 2016, improving business decision-making speed by 25%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Integrated a data pipeline framework to ingest data from 3rd-party APIs, Google Sheets, and MySQL, processing 100+ attributes and improving data efficiency by 30%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Developed a reporting framework for the data warehouse, generating 20+ operational reports and increasing stakeholder access to decision-ready data by 35%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Built backend services to serve millions of records from the warehouse, reducing data retrieval latency by 20%</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Data Pipeline</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Software Engineer</h3>
+                                <h4>Nascenia Ltd</h4>
+                                <div class="location-date">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> Jun 2013 - May 2015</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="achievements">
+                            <div class="achievement">
+                                <span>Deployed a B2B marketplace platform for farmers using Ruby on Rails and MySQL, increasing seller participation by 30% and boosting transactions by 25%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Built a web-based tool for social media analytics and post scheduling with Ruby on Rails and PostgreSQL, improving engagement by 40%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Enhanced a school management system by extending core features using Ruby on Rails and PostgreSQL, improving system efficiency and reducing administrative workload by 35%</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Ruby on Rails</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-info">
+                            <div class="company-logo">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="company-details">
+                                <h3>Software Engineer</h3>
+                                <h4>Right Brain Solution Ltd</h4>
+                                <div class="location-date">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                                    <span class="date"><i class="fas fa-calendar"></i> Nov 2011 - May 2013</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="achievements">
+                            <div class="achievement">
+                                <span>Developed and deployed an API for social media mobile apps in collaboration with the dev team, increasing user engagement by 20%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Co-authored a high-traffic automotive portal for the Toronto Star, boosting monthly user visits by 35% and improving customer engagement</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Built a multilingual B2C ski rental shop, increasing rentals by 20% and expanding the international customer base by 15%</span>
+                            </div>
+                            <div class="achievement">
+                                <span>Optimized an OMR reader for university online exams, reducing manual data entry time by 95% through improved input handling</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">API Development</span>
+                            <span class="tech-tag">Web Applications</span>
+                            <span class="tech-tag">Mobile Apps</span>
+                            <span class="tech-tag">OMR Systems</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -250,90 +475,95 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-warehouse"></i>
-                    </div>
                     <div class="project-content">
-                        <h3>Data Lakehouse Architecture</h3>
-                        <p>Directed design and implementation of modern data lakehouse platform with dbt Core standards and CI/CD integration, improving data quality 30%.</p>
+                        <h3>Modern Data Lakehouse & Analytics Platform</h3>
+                        <p class="section-subtitle">Staff Data Engineer at Zeals Co., Ltd</p>
+                        <p>Designed and implemented a cloud-native lakehouse, improving data accessibility, governance, and decision-making across the organization.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">BigQuery</span>
-                            <span class="tech-tag">dbt Core</span>
-                            <span class="tech-tag">Airflow</span>
                             <span class="tech-tag">GCP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>BigQuery Cost Optimization</h3>
-                        <p>Built comprehensive cost monitoring system cutting runtime 90%, bytes scanned 80%, and monthly costs 40% through query and data model optimization.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">BigQuery</span>
-                            <span class="tech-tag">FinOps</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Monitoring</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Dimensional Data Modeling</h3>
-                        <p>Engineered gold layer with star schema, transforming raw events into optimized dim_ and fact_ tables, improving query performance 70%.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Star Schema</span>
-                            <span class="tech-tag">BigQuery</span>
-                            <span class="tech-tag">dbt</span>
-                            <span class="tech-tag">SQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>ML Pipeline Automation</h3>
-                        <p>Built automated pipelines for feature engineering and batch inference, cutting model iteration time 30%.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Cloud Composer</span>
                             <span class="tech-tag">Dataproc</span>
-                            <span class="tech-tag">Dataflow</span>
+                            <span class="tech-tag">Pub/Sub</span>
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Apache Iceberg</span>
+                            <span class="tech-tag">Apache Spark</span>
+                            <span class="tech-tag">dbt</span>
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scala</span>
+                            <span class="tech-tag">Dataproc</span>
+                            <span class="tech-tag">Github Action</span>
                         </div>
-                        <div class="project-links">
+                        <!-- <div class="project-links">
                             <a href="#" class="project-link">
                                 <i class="fab fa-github"></i>
                                 Code
                             </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Dimensional Modeling & Gold Layer Engineering</h3>
+                        <p class="section-subtitle">Staff Data Engineer at Zeals Co., Ltd</p>
+                        <p>Architected the Gold Layer with star-schema modeling, delivering business-ready fact and dimension tables that cut scan volume 80% and boosted query performance 70%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Cloud Composer</span>
+                            <span class="tech-tag">dbt Core</span>
+                            <span class="tech-tag">Dimensional Modeling</span>
+                            <span class="tech-tag">Data Warehouse</span>
+                            <span class="tech-tag">Github Action</span>
                         </div>
+                        <!-- <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>FinOps Cost Optimization Pipeline</h3>
+                        <p class="section-subtitle">Staff Data Engineer at Zeals Co., Ltd</p>
+                        <p>Built a BigQuery and GCP Billing–based cost monitoring system, reducing monthly query costs by 40% and per-query costs by up to 95%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GCP Billing</span>
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Cloud Monitoring</span>
+                        </div>
+                        <!-- <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Data Governance & Quality Framework</h3>
+                        <p class="section-subtitle">Staff Data Engineer at Zeals Co., Ltd</p>
+                        <p>Established dbt-driven data lineage, testing, and governance practices, improving data accuracy by 25% and boosting stakeholder trust.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">dbt</span>
+                            <span class="tech-tag">GCP Data Catalog</span>
+                            <span class="tech-tag">Data Lineage</span>
+                            <span class="tech-tag">Data Quality</span>
+                            <span class="tech-tag">Data Contracts</span>
+                            <span class="tech-tag">Cloud Asset Management</span>
+                            <span class="tech-tag">Great Expectations</span>
+                        </div>
+                        <!-- <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -348,211 +578,399 @@
             </div>
             <div class="skills-content">
                 <div class="skills-category">
-                    <h3>Languages & Scripting</h3>
+                    <h3>Programming & Scripting</h3>
                     <div class="skills-list">
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fab fa-python"></i>
-                                <span>Python</span>
-                            </div>
+                            <i class="fab fa-python skill-icon"></i>
+                            <span class="skill-name">Python</span>
                             <div class="skill-progress">
                                 <div class="progress-bar" style="width: 95%;"></div>
                             </div>
+                            <span class="skill-percentage">95%</span>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-database"></i>
-                                <span>SQL</span>
-                            </div>
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">SQL</span>
                             <div class="skill-progress">
                                 <div class="progress-bar" style="width: 98%;"></div>
                             </div>
+                            <span class="skill-percentage">98%</span>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fab fa-java"></i>
-                                <span>Scala</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-terminal"></i>
-                                <span>Bash</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3>Data Platforms & Storage</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-database"></i>
-                                <span>BigQuery</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-fire"></i>
-                                <span>Apache Spark</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 88%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-cube"></i>
-                                <span>Apache Iceberg</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 75%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-server"></i>
-                                <span>HDFS</span>
-                            </div>
+                            <i class="fab fa-golang skill-icon"></i>
+                            <span class="skill-name">GoLang</span>
                             <div class="skill-progress">
                                 <div class="progress-bar" style="width: 80%;"></div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3>Orchestration & ELT</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-cogs"></i>
-                                <span>dbt Core</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 92%;"></div>
-                            </div>
+                            <span class="skill-percentage">80%</span>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-wind"></i>
-                                <span>Apache Airflow</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-cloud"></i>
-                                <span>Cloud Composer</span>
-                            </div>
+                            <i class="fab fa-java skill-icon"></i>
+                            <span class="skill-name">Scala</span>
                             <div class="skill-progress">
                                 <div class="progress-bar" style="width: 85%;"></div>
                             </div>
+                            <span class="skill-percentage">85%</span>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-stream"></i>
-                                <span>Pub/Sub</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 87%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3>Cloud Platforms</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fab fa-google"></i>
-                                <span>Google Cloud (GCP)</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 93%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fab fa-aws"></i>
-                                <span>Amazon AWS</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fab fa-microsoft"></i>
-                                <span>Microsoft Azure</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 70%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-snowflake"></i>
-                                <span>Snowflake</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 78%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3>BI & Visualization</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-chart-bar"></i>
-                                <span>Tableau</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Looker</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 88%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-chart-area"></i>
-                                <span>Data Studio</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <i class="fas fa-chart-pie"></i>
-                                <span>Redash</span>
-                            </div>
+                            <i class="fas fa-gem skill-icon"></i>
+                            <span class="skill-name">Ruby</span>
                             <div class="skill-progress">
                                 <div class="progress-bar" style="width: 75%;"></div>
                             </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-php skill-icon"></i>
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal skill-icon"></i>
+                            <span class="skill-name">Bash</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Data Processing & Management</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-fire skill-icon"></i>
+                            <span class="skill-name">Apache Spark</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-stream skill-icon"></i>
+                            <span class="skill-name">Apache Flink</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exchange-alt skill-icon"></i>
+                            <span class="skill-name">Apache Kafka</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search skill-icon"></i>
+                            <span class="skill-name">Apache Presto</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cube skill-icon"></i>
+                            <span class="skill-name">Apache Iceberg</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs skill-icon"></i>
+                            <span class="skill-name">dbt Core</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 95%;"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Database Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">SQL Server</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 88%;"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">DuckDB</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf skill-icon"></i>
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Cloud Platforms - GCP</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-google skill-icon"></i>
+                            <span class="skill-name">BigQuery</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 95%;"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server skill-icon"></i>
+                            <span class="skill-name">Dataproc</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-stream skill-icon"></i>
+                            <span class="skill-name">Dataflow</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 88%;"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wind skill-icon"></i>
+                            <span class="skill-name">Cloud Composer</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-broadcast-tower skill-icon"></i>
+                            <span class="skill-name">Pub/Sub</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 87%;"></div>
+                            </div>
+                            <span class="skill-percentage">87%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud skill-icon"></i>
+                            <span class="skill-name">Cloud Storage</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 92%;"></div>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Cloud Platforms - AWS</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-aws skill-icon"></i>
+                            <span class="skill-name">Athena</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server skill-icon"></i>
+                            <span class="skill-name">EMR</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">DynamoDB</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>DevOps & Infrastructure</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-docker skill-icon"></i>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 88%;"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-dharmachakra skill-icon"></i>
+                            <span class="skill-name">Kubernetes</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code-branch skill-icon"></i>
+                            <span class="skill-name">Terraform</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github skill-icon"></i>
+                            <span class="skill-name">GitHub Actions</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 83%;"></div>
+                            </div>
+                            <span class="skill-percentage">83%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>BI & Analytics</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar skill-icon"></i>
+                            <span class="skill-name">Tableau</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie skill-icon"></i>
+                            <span class="skill-name">Redash</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-google skill-icon"></i>
+                            <span class="skill-name">Google Data Studio</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Data Governance & Quality</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt skill-icon"></i>
+                            <span class="skill-name">Data Stewardship</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-book skill-icon"></i>
+                            <span class="skill-name">Data Cataloging</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap skill-icon"></i>
+                            <span class="skill-name">dbt Lineage & Tests</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 95%;"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check-circle skill-icon"></i>
+                            <span class="skill-name">Great Expectations</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-lock skill-icon"></i>
+                            <span class="skill-name">GDPR/CCPA/HIPAA</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 88%;"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>FinOps & Cost Optimization</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fas fa-tachometer-alt skill-icon"></i>
+                            <span class="skill-name">Query Tuning</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 95%;"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-layer-group skill-icon"></i>
+                            <span class="skill-name">Partitioning & Clustering</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-dollar-sign skill-icon"></i>
+                            <span class="skill-name">GCP Billing & Monitoring</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 92%;"></div>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exclamation-triangle skill-icon"></i>
+                            <span class="skill-name">Anomaly Detection</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
                         </div>
                     </div>
                 </div>
@@ -585,39 +1003,31 @@
                             <span>Tokyo, Japan</span>
                         </div>
                     </div>
-
-                    <div class="contact-social">
-                        <a href="https://linkedin.com/in/salayhin" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/salayhin" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:salayhin.lab@gmail.com" class="social-link" target="_blank">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
                 </div>
 
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <div class="contact-right">
+
+                    <div class="social-media-section">
+                        <div class="contact-social">
+                            <a href="https://linkedin.com/in/salayhin" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/salayhin" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:salayhin.lab@gmail.com" class="social-link" target="_blank">
+                                <i class="fas fa-envelope"></i>
+                            </a>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
+                    </div>
+
+                    <div class="resume-download">
+                        <p>Download my complete resume to learn more about my experience and qualifications.</p>
+                        <a href="resume/Md_sirajus_Salayhin_Data_Engineer.pdf" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -628,12 +1038,6 @@
             <div class="footer-content">
                 <div class="footer-text">
                     <p>&copy; 2025 Md Sirajus Salayhin. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>

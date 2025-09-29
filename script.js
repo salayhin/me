@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
-    const navLinksContainer = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinks = document.querySelector('.nav-links');
 
     // Mobile Navigation
     if (navToggle) {
         navToggle.addEventListener('click', () => {
-            navLinksContainer.classList.toggle('active');
+            navLinks.classList.toggle('active');
         });
     }
 
+    const navLinksAnchors = document.querySelectorAll('.nav-links a');
     // Close mobile nav when clicking a link
-    if (navLinks.length > 0) {
-        navLinks.forEach(link => {
+    if (navLinksAnchors.length > 0) {
+        navLinksAnchors.forEach(link => {
             link.addEventListener('click', () => {
-                if (navLinksContainer.classList.contains('active')) {
-                    navLinksContainer.classList.remove('active');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
                 }
             });
         });
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sections.forEach(section => {
             if (section.offsetTop <= scrollPosition && (section.offsetTop + section.offsetHeight) > scrollPosition) {
-                navLinks.forEach(link => {
+                navLinksAnchors.forEach(link => {
                     link.classList.remove('active');
                     if (section.id && link.getAttribute('href') === `#${section.id}`) {
                         link.classList.add('active');
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, options);
-        document.querySelectorAll('section, .timeline-item').forEach(el => observer.observe(el));
+        document.querySelectorAll('section').forEach(el => observer.observe(el));
     }
 
     // Initialize Functions

@@ -408,69 +408,12 @@ p {
     color: var(--text-color-light);
 }
 
-.resume-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.resume-download {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 5px 20px var(--shadow-color);
-}
-
-.resume-download p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--text-color-light);
-}
-
-.resume-highlights {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 5px 20px var(--shadow-color);
-}
-
-.resume-highlights h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
-.resume-highlights ul {
-    list-style: none;
-}
-
-.resume-highlights li {
-    padding: 0.5rem 0;
-    position: relative;
-    padding-left: 1.5rem;
-    color: var(--text-color-light);
-}
-
-.resume-highlights li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--success-color);
-    font-weight: bold;
-}
-
-.resume {
-    background-color: var(--bg-color);
-}
-
 .resume-simple {
     text-align: center;
     padding: 2rem;
     background-color: var(--card-bg);
     border-radius: var(--border-radius-lg);
     box-shadow: 0 5px 20px var(--shadow-color);
-    margin: 0 auto;
 }
 
 .resume-header h3 {
@@ -1437,6 +1380,18 @@ p {
 @media (max-width: 968px) {
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 4px 8px var(--shadow-color);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .nav-toggle {

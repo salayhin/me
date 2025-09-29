@@ -1096,11 +1096,8 @@ p {
 
 /* GCP Services Specific Styling */
 .skill-tag.gcp-service {
-    background: linear-gradient(135deg,
-        rgba(66, 133, 244, 0.12) 0%,
-        rgba(66, 133, 244, 0.06) 100%);
-    border: 1px dashed rgba(66, 133, 244, 0.4);
-    color: rgb(26, 74, 162);
+    position: relative;
+    padding-left: 1.2rem;
 }
 
 .skill-tag.gcp-service::before {
@@ -1108,30 +1105,20 @@ p {
     position: absolute;
     top: -8px;
     left: 8px;
-    background: #4285F4;
-    color: white;
+    background: rgba(66, 133, 244, 0.2);
+    color: rgb(26, 74, 162);
     font-size: 0.65rem;
     padding: 0.1rem 0.4rem;
     border-radius: 4px;
     font-weight: 600;
-    opacity: 0.9;
+    border: 1px solid rgba(66, 133, 244, 0.3);
 }
 
-.skill-tag.gcp-service:hover {
-    background: linear-gradient(135deg,
-        rgba(66, 133, 244, 0.18) 0%,
-        rgba(66, 133, 244, 0.12) 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
-}
 
 /* AWS Services Specific Styling */
 .skill-tag.aws-service {
-    background: linear-gradient(135deg,
-        rgba(255, 153, 0, 0.12) 0%,
-        rgba(255, 153, 0, 0.06) 100%);
-    border: 1px dashed rgba(255, 153, 0, 0.4);
-    color: rgb(180, 83, 9);
+    position: relative;
+    padding-left: 1.2rem;
 }
 
 .skill-tag.aws-service::before {
@@ -1139,22 +1126,15 @@ p {
     position: absolute;
     top: -8px;
     left: 8px;
-    background: #FF9900;
-    color: white;
+    background: rgba(255, 153, 0, 0.2);
+    color: rgb(180, 83, 9);
     font-size: 0.65rem;
     padding: 0.1rem 0.4rem;
     border-radius: 4px;
     font-weight: 600;
-    opacity: 0.9;
+    border: 1px solid rgba(255, 153, 0, 0.3);
 }
 
-.skill-tag.aws-service:hover {
-    background: linear-gradient(135deg,
-        rgba(255, 153, 0, 0.18) 0%,
-        rgba(255, 153, 0, 0.12) 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.2);
-}
 
 /* Update legend colors to match */
 .legend-color.proficient {

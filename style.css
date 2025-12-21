@@ -258,12 +258,9 @@ p {
     animation: fadeInUp 1s ease 0.2s both;
 }
 
-.hero-description {
-    font-size: 1.1rem;
-    color: var(--text-color-light);
-    margin-bottom: 2rem;
-    max-width: 500px;
-    animation: fadeInUp 1s ease 0.4s both;
+.hero-description{
+  max-width: 720px;
+  line-height: 1.6;
 }
 
 .hero-cta {
@@ -421,10 +418,9 @@ p {
     margin-bottom: 1rem;
 }
 
-.resume-tagline {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--text-color-light);
+.resume-tagline{
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .resume-actions {
@@ -599,26 +595,21 @@ p {
     color: var(--text-color-light);
 }
 
-.achievements {
-    margin-bottom: 1.5rem;
+.achievement{
+  margin: 10px 0;
+  line-height: 1.6;
 }
 
-.achievement {
-    position: relative;
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    color: var(--text-color);
-    font-size: 0.9rem;
-    line-height: 1.6;
+.achievement{
+  position: relative;
+  padding-left: 18px;
+  margin: 10px 0;
+  line-height: 1.6;
 }
-
-.achievement::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.2rem;
+.achievement::before{
+  content: "•";
+  position: absolute;
+  left: 0;
 }
 
 .achievement span {
@@ -1408,8 +1399,10 @@ p {
         font-size: 2.5rem;
     }
 
-    .hero-title {
-        font-size: 1.2rem;
+    .hero-title{
+    max-width: 720px;
+    line-height: 1.25;
+    margin-bottom: 12px;
     }
 
 

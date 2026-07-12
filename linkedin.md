@@ -6,7 +6,13 @@
 
 ---
 
-## Headline (135 chars)
+## Headline (mobile-optimized, ~92 chars — front-loads essentials before mobile truncation)
+
+```
+Data Platform Architect · Scalable Data Platforms on GCP & AWS · Security, Governance & FinOps
+```
+
+*Longer keyword-rich alternative (135 chars, desktop) — swap in if you want dbt/Iceberg/AI search terms:*
 
 ```
 Data Platform Architect · Scalable Lakehouse Platforms on GCP & AWS · dbt · Iceberg · Security, Governance & FinOps · AI/LLM-Ready Data

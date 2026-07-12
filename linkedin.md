@@ -1,7 +1,7 @@
 # LinkedIn Profile — Source of Truth
 
 > Brand is deliberately different from the résumé (`resume/resume.html`) and that split is intentional.
-> Résumé leads with **Staff Data Engineer** (Data Platform Engineering); LinkedIn leads with the hybrid
+> Résumé leads with **Staff Data Platform Engineer**; LinkedIn leads with the hybrid
 > **Data Platform Architect** (leans toward Head of Data). Same verified metrics back both. Keep in sync.
 
 ---
@@ -49,7 +49,7 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 ### Zeals Co., Ltd — Tokyo, Japan / Remote
 *Career progression across three roles (Apr 2021 – Present); joined remotely, relocated to Tokyo in 2022.*
 
-#### Staff Data Engineer · Permanent · Nov 2023 – Present · Tokyo, Japan · On-site
+#### Staff Data Platform Engineer · Permanent · Nov 2023 – Present · Tokyo, Japan · On-site
 
 - Own the technical direction of the data platform as sole architect and primary decision-maker for architecture, tooling choices, and scalability trade-offs.
 - Architected and operate a production Apache Iceberg lakehouse on GCP (GCS + BigLake, dual-engine BigQuery + Spark on Dataproc) serving analytics, ML, and BI.

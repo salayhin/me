@@ -60,9 +60,10 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 
 #### Senior Big Data Engineer · Permanent · Nov 2022 – Oct 2023 · Tokyo, Japan · On-site
 
-- Established data contracts, quality standards, and BigQuery audit logging to strengthen governance and compliance across analytics datasets.
-- Deployed CI/CD for data workflows with Terraform (infrastructure-as-code), improving reliability and reducing manual operational toil.
-- Developed the FinOps tooling — daily cost collection across GCP projects with billing-based actuals and expensive-query alerts — that underpinned the platform-wide cost program.
+- Built the platform's core pipeline framework — a Docker- and script-driven system that provisions and manages ephemeral Dataproc clusters — running Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through medallion (bronze → gold) layers, orchestrated end-to-end on Cloud Composer (Airflow).
+- Established data contracts, quality standards, BigQuery audit logging, and end-to-end data lineage & metadata (dbt + GCP-native) to strengthen governance and compliance across analytics datasets.
+- Deployed CI/CD with Terraform (infrastructure-as-code) and GitHub Actions across Spark pipelines and dbt models, improving reliability and reducing manual operational toil.
+- Developed the FinOps tooling on GKE — daily cost collection across GCP projects with billing-based actuals and expensive-query alerts — that underpinned the platform-wide cost program.
 - Built a semantic gold layer (star-schema dim/fact modeling) powering a customer-facing analytics dashboard.
 - Integrated BI tools (Tableau) with the lakehouse gold layer to enable near-real-time business insights for stakeholders.
 

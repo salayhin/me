@@ -46,17 +46,31 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 
 ## Experience
 
-### Zeals Co., Ltd — Tokyo, Japan
-**Staff Data Engineer** (promoted Nov 2023) · Senior Big Data Engineer (May 2021 – Oct 2023) · May 2021 – Present
-*Joined remotely, relocated to Tokyo in 2022.*
+### Zeals Co., Ltd — Tokyo, Japan / Remote
+*Career progression across three roles (Apr 2021 – Present); joined remotely, relocated to Tokyo in 2022.*
 
-- Sole architect and primary technical decision-maker for the company-wide data platform that analytics, ML, and BI teams self-serve on — owning architecture reviews, tooling decisions, and platform standards, and running the BI layer (Tableau, Redash) as platform-managed services.
-- Architected and operate a production Apache Iceberg lakehouse on GCS (BigLake Metastore) with dual-engine access via BigQuery and Spark on Dataproc — chosen for cost, multi-engine reads without data duplication, and protobuf schema evolution.
-- Built the team's core pipeline framework — a Docker- and script-driven system that provisions and manages ephemeral Dataproc clusters — running Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through landing → bronze → gold medallion layers, orchestrated end-to-end on Cloud Composer (Airflow), the platform's primary orchestrator.
-- Drove a platform-wide cost program (BigQuery optimization + Iceberg migration), lowering monthly spend ~60% (¥1.2M → under ¥500K); optimized BigQuery with partitioning, clustering, and star-schema gold models, cutting query runtime up to 90% and scan volume 80%.
-- Led adoption of dbt Cloud (CI/CD, testing, documentation standards) as the platform's modeling layer where analytics engineers build and own models — cutting data incidents reaching stakeholders from 2–3/month to under one every two months and pipeline maintenance from 1–2 days/week to a few hours.
-- Own platform governance and security: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, cloud resources and IAM as Infrastructure-as-Code (Terraform, PR-reviewed), end-to-end data lineage and metadata (dbt + GCP-native), and SOC 2 support — plus a FinOps & observability suite on GKE (cost, freshness, and quota alerting).
-- Designed a custom MCP server for governed, AI-assisted analytics on BigQuery (self-service, plain-language querying restricted to gold tables); standardized CI/CD via GitHub Actions across Spark and dbt workloads; championed team AI adoption and mentored junior engineers.
+#### Staff Data Engineer · Permanent · Nov 2023 – Present · Tokyo, Japan · On-site
+
+- Own the technical direction of the data platform as sole architect and primary decision-maker for architecture, tooling choices, and scalability trade-offs.
+- Architected and operate a production Apache Iceberg lakehouse on GCP (GCS + BigLake, dual-engine BigQuery + Spark on Dataproc) serving analytics, ML, and BI.
+- Led adoption of dbt with CI/CD, testing, and documentation standards across data teams — cutting data incidents reaching stakeholders from 2–3/month to under one every two months.
+- Drove a platform-wide FinOps and cost program (BigQuery optimization + Iceberg migration), lowering monthly cloud spend ~60% (¥1.2M → under ¥500K) while improving performance.
+- Established platform governance and security: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, IAM-as-code in Terraform, and SOC 2 support.
+- Designed a custom MCP server for governed, AI-assisted analytics on BigQuery; championed AI adoption and mentored junior engineers.
+
+#### Senior Big Data Engineer · Permanent · Nov 2022 – Oct 2023 · Tokyo, Japan · On-site
+
+- Established data contracts, quality standards, and BigQuery audit logging to strengthen governance and compliance across analytics datasets.
+- Deployed CI/CD for data workflows with Terraform (infrastructure-as-code), improving reliability and reducing manual operational toil.
+- Developed the FinOps tooling — daily cost collection across GCP projects with billing-based actuals and expensive-query alerts — that underpinned the platform-wide cost program.
+- Built a semantic gold layer (star-schema dim/fact modeling) powering a customer-facing analytics dashboard.
+- Integrated BI tools (Tableau) with the lakehouse gold layer to enable near-real-time business insights for stakeholders.
+
+#### Senior Data & Infrastructure Engineer (Remote) · Full-time · Apr 2021 – Oct 2022 · Dhaka, Bangladesh · Remote
+
+- Developed the initial data lakehouse on GCP (BigQuery + Cloud Storage), establishing the scalable foundation for company-wide analytics and ML.
+- Partnered with R&D and analytics teams to support ML model development and BI dashboarding on trusted, well-modeled data.
+- Audited and remediated data storage systems with the security team, strengthening data protection and access controls.
 
 ### Pathao Ltd — Dhaka, Bangladesh
 **Senior Data Engineer, Level 2** · Jun 2018 – May 2021

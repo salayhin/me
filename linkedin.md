@@ -58,7 +58,7 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 - Established platform governance and security: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, IAM-as-code in Terraform, and SOC 2 support.
 - Designed a custom MCP server for governed, AI-assisted analytics on BigQuery; championed AI adoption and mentored junior engineers.
 
-#### Senior Big Data Engineer · Permanent · Nov 2022 – Oct 2023 · Tokyo, Japan · On-site
+#### Senior Data Platform Engineer · Permanent · Nov 2022 – Oct 2023 · Tokyo, Japan · On-site
 
 - Built the platform's core pipeline framework — a Docker- and script-driven system that provisions and manages ephemeral Dataproc clusters — running Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through medallion (bronze → gold) layers, orchestrated end-to-end on Cloud Composer (Airflow).
 - Established data contracts, quality standards, BigQuery audit logging, and end-to-end data lineage & metadata (dbt + GCP-native) to strengthen governance and compliance across analytics datasets.

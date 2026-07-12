@@ -36,14 +36,14 @@
 <body>
 
 <h1>Salayhin Md Sirajus</h1>
-<div class="tagline">Staff Data Engineer — Data Platform Architecture &amp; Governance</div>
+<div class="tagline">Staff Data Engineer — Data Platform Engineering &amp; Governance</div>
 <div class="contact-line">
   <span>Tokyo, Japan</span> · <span>+81-080-6918-4753</span> · <span><a href="mailto:salayhin.lab@gmail.com">salayhin.lab@gmail.com</a></span> ·
   <span><a href="https://linkedin.com/in/salayhin">linkedin.com/in/salayhin</a></span> · <span><a href="https://github.com/salayhin">github.com/salayhin</a></span> · <span><a href="https://salayhin.github.io/me/">salayhin.github.io/me</a></span>
 </div>
 
 <h2>Summary</h2>
-<p style="margin-bottom: 5px;">Staff Data Engineer with 15+ years of experience, from software-engineering roots to sole architect and primary technical decision-maker of a company-wide data platform. Architected and operate a production <strong>Apache Iceberg lakehouse on GCP</strong> (Scala/Spark, BigLake, dbt) serving analytics, ML, and BI. Drove a platform-wide cost program cutting monthly spend ~60% (¥1.2M → under ¥500K).</p>
+<p style="margin-bottom: 5px;">Staff Data Engineer with 15+ years of experience, from software-engineering roots to sole architect and primary technical decision-maker of a company-wide data platform. Architected and operate a production Apache Iceberg lakehouse on GCP (Scala/Spark, BigLake, dbt) powering self-service analytics, ML, and BI. Drove a platform-wide cost program cutting monthly spend ~60% (¥1.2M → under ¥500K).</p>
 <p>Own governance and security for the data platform — PII masking at ingest, GDPR user-data erasure across Iceberg, access control as code, SOC&nbsp;2 support. Designed a custom MCP server enabling governed, AI-assisted analytics on BigQuery. Previously operated batch and near-real-time telemetry pipelines for 100K+ daily trips at Pathao.</p>
 
 <h2>Skills</h2>
@@ -53,9 +53,9 @@
   <li><strong>AWS:</strong> S3, S3 Tables (Iceberg), Athena, DynamoDB, EMR, Lambda</li>
   <li><strong>Lakehouse &amp; Modeling:</strong> Apache Iceberg (production), Parquet, Medallion Architecture, Dimensional Modeling</li>
   <li><strong>ELT &amp; Processing:</strong> dbt Core / dbt Cloud, Apache Airflow, Apache Spark</li>
-  <li><strong>Governance &amp; Security:</strong> PII masking, GDPR erasure, IAM-as-code (Terraform), BigQuery audit logs, data contracts, SOC 2 support</li>
+  <li><strong>Governance &amp; Security:</strong> PII masking, GDPR erasure, IAM-as-code (Terraform), data lineage &amp; metadata, BigQuery audit logs, data contracts, SOC 2 support</li>
   <li><strong>FinOps &amp; Observability:</strong> GCP Billing Export, Asset Inventory, Cloud Monitoring, data pipeline observability, cost &amp; data freshness alerting</li>
-  <li><strong>DevOps:</strong> Terraform, GitHub Actions, Docker, Kubernetes</li>
+  <li><strong>DevOps:</strong> Terraform (Infrastructure as Code), GitHub Actions, Docker, Kubernetes</li>
   <li><strong>AI Tooling:</strong> MCP servers, Claude Code, AI-assisted engineering</li>
   <li><strong>BI:</strong> Tableau, Redash</li>
 </ul>
@@ -66,16 +66,16 @@
   <div class="job-head"><h3>Zeals Co., Ltd — Tokyo, Japan</h3><span class="dates">May 2021 – Present</span></div>
   <div class="org">Staff Data Engineer (promoted Nov 2023) · Senior Big Data Engineer (May 2021 – Oct 2023; joined remotely, relocated to Tokyo 2022)</div>
   <ul>
-    <li>Sole architect and primary technical decision-maker for the company-wide data platform powering analytics, ML, and BI — owning architecture reviews, tooling decisions, and platform standards across the data organization.</li>
-    <li>Architected and operate a production <strong>Apache Iceberg lakehouse</strong> on GCS (BigLake Metastore) with dual-engine access via BigQuery and Spark on Dataproc — chosen for cost, multi-engine reads without duplication, and protobuf schema evolution.</li>
-    <li>Engineered Scala/Spark pipelines ingesting ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through landing → bronze → gold medallion layers, with automated Iceberg table maintenance (compaction, snapshot expiry).</li>
+    <li>Sole architect and primary technical decision-maker for the company-wide data platform that analytics, ML, and BI teams self-serve on — owning architecture reviews, tooling decisions, and platform standards across the data organization.</li>
+    <li>Architected and operate a production Apache Iceberg lakehouse on GCS (BigLake Metastore) with dual-engine access via BigQuery and Spark on Dataproc — chosen for cost, multi-engine reads without duplication, and protobuf schema evolution.</li>
+    <li>Built the team's core pipeline framework — a Docker- and script-driven system that provisions and manages ephemeral Dataproc clusters — running Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through landing → bronze → gold medallion layers, with automated Iceberg table maintenance (compaction, snapshot expiry) — orchestrated end-to-end on Cloud Composer (Airflow), the platform's primary orchestrator.</li>
     <li>Drove a platform-wide cost program spanning BigQuery optimization and the Iceberg migration, lowering monthly spend ~60% (¥1.2M → under ¥500K).</li>
     <li>Optimized BigQuery workloads using system tables and billing exports — partitioning, clustering, and gold-layer star-schema modeling (dim_/fact_ tables) — reducing query runtime by up to 90% and scan volume by 80%.</li>
-    <li>Led adoption of dbt Core/Cloud with CI/CD, testing, and documentation standards — cutting data incidents reaching stakeholders from 2–3/month to under one every two months, and pipeline maintenance from 1–2 days/week to a few hours.</li>
-    <li>Own platform governance and security: column-level PII masking at ingest backed by BigQuery policies, GDPR right-to-erasure across Iceberg tables and snapshots, IAM-as-code via Terraform with PR review (dedicated BigQuery IAM module), and partnered with security engineers on SOC 2 compliance for the analytics layer.</li>
-    <li>Shipped the FinOps &amp; observability suite: daily cost collection across all GCP projects with billing-based actuals, expensive-query and cache-miss alerts, BigQuery freshness and quota alerts, Airflow pipeline summaries, and a central observability dashboard.</li>
-    <li>Designed a custom <strong>MCP server for governed, AI-assisted analytics</strong> on BigQuery — schema discovery and plain-language querying of business metrics, restricted to gold tables via a security layer; championed team AI adoption (Claude Code enablement, best practices, custom skills, AI-assisted code review).</li>
-    <li>Defined data contracts, quality standards, and SLAs across teams; mentored junior engineers.</li>
+    <li>Led adoption of dbt Cloud with CI/CD, testing, and documentation standards — now the platform's modeling layer, where analytics engineers build and own models — cutting data incidents reaching stakeholders from 2–3/month to under one every two months, and pipeline maintenance from 1–2 days/week to a few hours.</li>
+    <li>Own platform governance and security: column-level PII masking at ingest backed by BigQuery policies, GDPR right-to-erasure across Iceberg tables and snapshots, cloud resources and IAM managed as Infrastructure-as-Code via Terraform with PR review (dedicated BigQuery IAM module), end-to-end data lineage and metadata via dbt and GCP-native lineage tracking, and partnered with security engineers on SOC 2 compliance for the analytics layer.</li>
+    <li>Shipped a FinOps &amp; observability suite running on GKE (Kubernetes): daily cost collection across all GCP projects with billing-based actuals, expensive-query and cache-miss alerts, BigQuery freshness and quota alerts, Cloud Composer (managed Airflow) pipeline summaries, and a central observability dashboard.</li>
+    <li>Designed a custom MCP server for governed, AI-assisted analytics on BigQuery — schema discovery and self-service, plain-language querying of business metrics, restricted to gold tables via a security layer; championed team AI adoption (Claude Code enablement, best practices, custom skills, AI-assisted code review).</li>
+    <li>Standardized CI/CD deployment via GitHub Actions across all platform workloads — Spark pipelines and dbt models alike ship through automated pipelines; defined data contracts, quality standards, and SLAs across teams; mentored junior engineers.</li>
   </ul>
 </div>
 

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Salayhin Md Sirajus | Staff Data Engineer — Data Platform Architecture & Governance</title>
+    <title>Salayhin Md Sirajus | Staff Data Engineer — Data Platform Engineering & Governance</title>
 
     <!-- Meta Description for SEO -->
     <meta name="description" content="Staff Data Engineer with 15+ years of experience — architect of a production Apache Iceberg lakehouse on GCP, data governance and security, FinOps, and AI-assisted analytics with MCP.">
 
     <!-- Open Graph Tags for Social Sharing -->
-    <meta property="og:title" content="Salayhin Md Sirajus | Staff Data Engineer — Data Platform Architecture & Governance">
+    <meta property="og:title" content="Salayhin Md Sirajus | Staff Data Engineer — Data Platform Engineering & Governance">
     <meta property="og:description" content="Staff Data Engineer with 15+ years of experience — architect of a production Apache Iceberg lakehouse on GCP, data governance and security, FinOps, and AI-assisted analytics with MCP.">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Salayhin Md Sirajus | Staff Data Engineer — Data Platform Architecture & Governance">
+    <meta name="twitter:title" content="Salayhin Md Sirajus | Staff Data Engineer — Data Platform Engineering & Governance">
     <meta name="twitter:description" content="Staff Data Engineer — architect of a production Apache Iceberg lakehouse on GCP, data governance and security, FinOps, and AI-assisted analytics with MCP.">
 
     <!-- Favicon -->
@@ -66,7 +66,7 @@
                 <div class="hero-text">
                     <p class="hero-greeting">Hello, I'm</p>
                     <h1 class="hero-name">Salayhin</h1>
-                    <h2 class="hero-title">Staff Data Engineer — Data Platform Architecture & Governance</h2>
+                    <h2 class="hero-title">Staff Data Engineer — Data Platform Engineering & Governance</h2>
                     <p class="hero-description">I architect and operate cloud-native data platforms — a production Apache Iceberg lakehouse on GCP, governed and secured end-to-end. I make the platform-level decisions that balance performance, cost, reliability, and developer productivity for analytics, ML, and BI.</p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -109,8 +109,8 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>My Journey in Data Engineering</h3>
-                    <p>I’m a <strong>Staff Data Engineer</strong> with <strong>15+ years of experience</strong>, from software-engineering roots to sole architect and primary technical decision-maker of a company-wide data platform. I architected and operate a <strong>production Apache Iceberg lakehouse on GCP</strong> serving analytics, ML, and BI.</p>
-                    <p>I specialize in <strong>lakehouse architecture, data governance &amp; security, dbt-driven analytics, and FinOps</strong> — PII masking at ingest, GDPR user-data erasure, access control as code, and platform-wide cost programs. Recently I designed a custom <strong>MCP server for governed, AI-assisted analytics</strong> on BigQuery and lead AI adoption across the team. I care deeply about mentorship and strong engineering practices.</p>
+                    <p>I’m a Staff Data Engineer with 15+ years of experience, from software-engineering roots to sole architect and primary technical decision-maker of a company-wide data platform. I architected and operate a production Apache Iceberg lakehouse on GCP powering self-service analytics, ML, and BI.</p>
+                    <p>I specialize in lakehouse architecture, data governance &amp; security, dbt-driven analytics, and FinOps — PII masking at ingest, GDPR user-data erasure, access control as code, and platform-wide cost programs. Recently I designed a custom MCP server for governed, AI-assisted analytics on BigQuery and championed AI adoption across the team. I care deeply about mentorship and strong engineering practices.</p>
                 </div>
             </div>
         </div>
@@ -124,7 +124,7 @@
             </div>
             <div class="resume-simple">
                 <div class="resume-header">
-                    <p class="resume-tagline">Staff Data Engineer | Data Platform Architecture &amp; Governance</p>
+                    <p class="resume-tagline">Staff Data Engineer | Data Platform Engineering &amp; Governance</p>
                     <div class="resume-actions">
                         <a href="resume/Salayhin_Md_Sirajus_Data_Engineer.pdf" target="_blank" class="btn btn-secondary open-pdf-modal" data-modal-title="Resume Preview">
                             <i class="fas fa-eye"></i>
@@ -169,16 +169,16 @@
                     </div>
                     <div class="experience-content">
                         <div class="achievements">
-                            <div class="achievement">Sole architect and primary technical decision-maker for the company-wide data platform powering analytics, ML, and BI — owning architecture reviews, tooling decisions, and platform standards across the data organization.</div>
+                            <div class="achievement">Sole architect and primary technical decision-maker for the company-wide data platform that analytics, ML, and BI teams self-serve on — owning architecture reviews, tooling decisions, and platform standards across the data organization.</div>
                             <div class="achievement">Architected and operate a production Apache Iceberg lakehouse on GCS (BigLake Metastore) with dual-engine access via BigQuery and Spark on Dataproc — chosen for cost, multi-engine reads without duplication, and protobuf schema evolution.</div>
-                            <div class="achievement">Engineered Scala/Spark pipelines ingesting ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through landing → bronze → gold medallion layers, with automated Iceberg table maintenance (compaction, snapshot expiry).</div>
+                            <div class="achievement">Built the team's core pipeline framework — a Docker- and script-driven system that provisions and manages ephemeral Dataproc clusters — running Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through landing → bronze → gold medallion layers, with automated Iceberg table maintenance (compaction, snapshot expiry) — orchestrated end-to-end on Cloud Composer (Airflow), the platform's primary orchestrator.</div>
                             <div class="achievement">Drove a platform-wide cost program spanning BigQuery optimization and the Iceberg migration, lowering monthly spend ~60% (¥1.2M → under ¥500K).</div>
                             <div class="achievement">Optimized BigQuery workloads using system tables and billing exports — partitioning, clustering, and gold-layer star-schema modeling (dim_/fact_ tables) — reducing query runtime by up to 90% and scan volume by 80%.</div>
-                            <div class="achievement">Led adoption of dbt Core/Cloud with CI/CD, testing, and documentation standards — cutting data incidents reaching stakeholders from 2–3/month to under one every two months, and pipeline maintenance from 1–2 days/week to a few hours.</div>
-                            <div class="achievement">Own platform governance and security: column-level PII masking at ingest backed by BigQuery policies, GDPR right-to-erasure across Iceberg tables and snapshots, IAM-as-code via Terraform with PR review, and partnered with security engineers on SOC 2 compliance for the analytics layer.</div>
-                            <div class="achievement">Shipped the FinOps &amp; observability suite: daily cost collection across all GCP projects with billing-based actuals, expensive-query and cache-miss alerts, BigQuery freshness and quota alerts, and a central observability dashboard.</div>
-                            <div class="achievement">Designed a custom MCP server for governed, AI-assisted analytics on BigQuery — schema discovery and plain-language querying of business metrics, restricted to gold tables via a security layer; championed team AI adoption (Claude Code enablement, best practices, custom skills, AI-assisted code review).</div>
-                            <div class="achievement">Defined data contracts, quality standards, and SLAs across teams; mentored junior engineers.</div>
+                            <div class="achievement">Led adoption of dbt Cloud with CI/CD, testing, and documentation standards — now the platform's modeling layer, where analytics engineers build and own models — cutting data incidents reaching stakeholders from 2–3/month to under one every two months, and pipeline maintenance from 1–2 days/week to a few hours.</div>
+                            <div class="achievement">Own platform governance and security: column-level PII masking at ingest backed by BigQuery policies, GDPR right-to-erasure across Iceberg tables and snapshots, cloud resources and IAM managed as Infrastructure-as-Code via Terraform with PR review, end-to-end data lineage and metadata via dbt and GCP-native lineage tracking, and partnered with security engineers on SOC 2 compliance for the analytics layer.</div>
+                            <div class="achievement">Shipped a FinOps &amp; observability suite running on GKE (Kubernetes): daily cost collection across all GCP projects with billing-based actuals, expensive-query and cache-miss alerts, BigQuery freshness and quota alerts, and a central observability dashboard.</div>
+                            <div class="achievement">Designed a custom MCP server for governed, AI-assisted analytics on BigQuery — schema discovery and self-service, plain-language querying of business metrics, restricted to gold tables via a security layer; championed team AI adoption (Claude Code enablement, best practices, custom skills, AI-assisted code review).</div>
+                            <div class="achievement">Standardized CI/CD deployment via GitHub Actions across all platform workloads — Spark pipelines and dbt models alike ship through automated pipelines; defined data contracts, quality standards, and SLAs across teams; mentored junior engineers.</div>
                         </div>
                         <div class="tech-stack">
                             <span class="tech-tag">Apache Iceberg</span>
@@ -426,7 +426,7 @@
                     <div class="project-content">
                         <h3>Governed AI Analytics — MCP Server for BigQuery</h3>
                         <p class="section-subtitle">Staff Data Engineer at Zeals Co., Ltd</p>
-                        <p>Designed a custom MCP server enabling AI assistants to run governed, natural-language analytics on BigQuery — schema discovery and plain-language querying of business metrics, restricted to gold tables via a security layer. Led team AI adoption: Claude Code enablement, best practices, custom skills, and AI-assisted code review.</p>
+                        <p>Designed a custom MCP server enabling AI assistants to run governed, natural-language analytics on BigQuery — schema discovery and self-service, plain-language querying of business metrics, restricted to gold tables via a security layer. Championed team AI adoption: Claude Code enablement, best practices, custom skills, and AI-assisted code review.</p>
                         <div class="project-tech">
                             <span class="tech-tag">MCP</span>
                             <span class="tech-tag">BigQuery</span>

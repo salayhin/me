@@ -36,7 +36,7 @@ I design and operate a production Apache Iceberg lakehouse on GCP (GCS + BigLake
 I build the scalable, observable, automated foundations that power the entire data lifecycle — cloud-native environments provisioned as Infrastructure-as-Code (Terraform), CI/CD for every workload from Spark pipelines to dbt models (GitHub Actions), orchestration, and observability — with FinOps treated as a first-class concern. My most recent cost program cut platform spend ~60% (¥1.2M → under ¥500K), and dbt-driven testing cut data incidents reaching stakeholders from 2–3/month to under one every two months. I also run the BI layer (Tableau, Redash) as platform-managed services.
 
 ▪ Data Security & Strategic Governance
-I embed compliance and access control into the platform fabric: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, IAM-as-code in Terraform, end-to-end data lineage and metadata, and SOC 2 support. I extend this to the AI layer — I designed a custom MCP server so LLM applications can query business metrics safely, governed down to curated gold tables. Security and governance as structural enablers, not operational constraints.
+I embed compliance and access control into the platform fabric: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, IAM-as-code in Terraform, end-to-end data lineage and metadata, and SOC 2 support. I extend this to the AI layer — I designed a custom MCP server so LLM applications can query business metrics safely, governed down to curated gold tables, and I'm now extending it into active cost governance (dry-run cost gating with confirm-to-override, plus a read-only advisor surfacing recurring expensive query patterns). Security and governance as structural enablers, not operational constraints.
 
 A modern platform must treat data as a true product — highly scalable, observable, and cost-efficient, with security, governance, and developer empathy baked into the architecture from day one. I thrive on owning complex data roadmaps, solving hard scalability problems, and driving technical excellence across GCP and AWS.
 
@@ -56,7 +56,7 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 - Led adoption of dbt with CI/CD, testing, and documentation standards across data teams — cutting data incidents reaching stakeholders from 2–3/month to under one every two months.
 - Drove a platform-wide FinOps and cost program (BigQuery optimization + Iceberg migration), lowering monthly cloud spend ~60% (¥1.2M → under ¥500K) while improving performance.
 - Established platform governance and security: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, IAM-as-code in Terraform, and SOC 2 support.
-- Designed a custom MCP server for governed, AI-assisted analytics on BigQuery; championed AI adoption and mentored junior engineers.
+- Designed a custom MCP server for governed, AI-assisted analytics on BigQuery, now extending it into active cost governance (dry-run cost gating, expensive-query advisor); championed AI adoption and mentored junior engineers.
 
 #### Senior Data Platform Engineer · Permanent · Nov 2022 – Oct 2023 · Tokyo, Japan · On-site
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Salayhin Md Sirajus — Data Platform Architect</title>
+<title>Salayhin Md Sirajus | Data Platform Architect</title>
 <style>
   @page { size: A4; margin: 11mm 14mm; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,7 +36,7 @@
 <body>
 
 <h1>Salayhin Md Sirajus</h1>
-<div class="tagline">Data Platform Architect — Solution Architecture &amp; Data Engineering</div>
+<div class="tagline">Data Platform Architect | Solution Architecture &amp; Data Engineering</div>
 <div class="contact-line">
   <span>Tokyo, Japan</span> · <span>+81-080-6918-4753</span> · <span><a href="mailto:salayhin.lab@gmail.com">salayhin.lab@gmail.com</a></span> ·
   <span><a href="https://linkedin.com/in/salayhin">linkedin.com/in/salayhin</a></span> · <span><a href="https://github.com/salayhin">github.com/salayhin</a></span> · <span><a href="https://salayhin.github.io/me/">salayhin.github.io/me</a></span>
@@ -50,7 +50,7 @@
   <li><strong>Architecture &amp; Design:</strong> Solution &amp; target architecture, HLD/LLD, architecture decision records, non-functional requirements, design reviews, Lakehouse (Apache Iceberg), Medallion Architecture</li>
   <li><strong>Data Modeling:</strong> Dimensional modeling (star schema), dbt semantic/metrics layer, AI/ML-ready models, data contracts</li>
   <li><strong>Data Engineering:</strong> SQL, Python, Scala, Apache Spark, ELT/ETL, Apache Airflow (Cloud Composer), dbt, Pub/Sub streaming, data quality &amp; monitoring</li>
-  <li><strong>Cloud:</strong> GCP — BigQuery, BigLake, Cloud Storage, Pub/Sub, Dataproc, Dataflow, Cloud Composer, GKE · AWS — S3, Lambda; S3 Tables (Iceberg), Athena, Glue Catalog (personal projects)</li>
+  <li><strong>Cloud:</strong> GCP: BigQuery, BigLake, Cloud Storage, Pub/Sub, Dataproc, Dataflow, Cloud Composer, GKE · AWS: S3, Lambda; S3 Tables (Iceberg), Athena, Glue Catalog (personal projects)</li>
   <li><strong>DevOps &amp; Delivery:</strong> CI/CD (GitHub Actions), automated testing, release readiness, Terraform (Infrastructure as Code), Docker, Kubernetes (GKE), runbooks</li>
   <li><strong>Security &amp; Compliance:</strong> PII masking, GDPR erasure, IAM-as-code, secrets management, BigQuery audit logs, data lineage &amp; catalog, SOC 2 support</li>
   <li><strong>Observability &amp; FinOps:</strong> Pipeline observability, data freshness &amp; cost alerting, GCP Billing Export, Cloud Monitoring</li>
@@ -62,48 +62,48 @@
 <h2>Experience</h2>
 
 <div class="job">
-  <div class="job-head"><h3>Zeals Co., Ltd — Tokyo, Japan</h3><span class="dates">Apr 2021 – Present</span></div>
+  <div class="job-head"><h3>Zeals Co., Ltd · Tokyo, Japan</h3><span class="dates">Apr 2021 – Present</span></div>
   <div class="org">Staff Data Platform Engineer (Nov 2023–Present) · Senior Data Platform Engineer (Nov 2022–Oct 2023) · Senior Data &amp; Infrastructure Engineer, remote (Apr 2021–Oct 2022)</div>
   <ul>
     <li>Sole architect and primary technical decision-maker for the company-wide data platform used by analytics, ML, and BI teams. Operate the BI layer (Tableau, Redash) as platform-managed services.</li>
     <li>Translate stakeholder requirements into technical specifications. Author design documents (HLD-style proposals, architecture decision records) and platform standards, and lead architecture and design reviews.</li>
-    <li>Defined and delivered the target architecture: a production Apache Iceberg lakehouse on GCS (BigLake Metastore), queried by both BigQuery and Spark on Dataproc. Selected on documented trade-offs — cost, multi-engine reads without duplication, and protobuf schema evolution.</li>
-    <li>Built the team's core pipeline framework — a Docker- and script-driven system that provisions ephemeral Dataproc clusters. It runs Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf events from Pub/Sub through landing → bronze → gold medallion layers, with automated Iceberg table maintenance. Orchestrated end-to-end on Cloud Composer (Airflow), the platform's primary orchestrator.</li>
+    <li>Defined and delivered the target architecture: a production Apache Iceberg lakehouse on GCS (BigLake Metastore), queried by both BigQuery and Spark on Dataproc. Selected based on documented trade-offs: cost, multi-engine reads without duplication, and protobuf schema evolution.</li>
+    <li>Built the team's core pipeline framework: a Docker- and script-driven system that provisions ephemeral Dataproc clusters. It runs Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf events from Pub/Sub through landing → bronze → gold medallion layers, with automated Iceberg table maintenance. Orchestrated end-to-end on Cloud Composer (Airflow), the platform's primary orchestrator.</li>
     <li>Led adoption of dbt Cloud as the platform's modeling and semantic/metrics layer, with automated testing and documentation standards; analytics engineers now build and own models. Reduced stakeholder-facing data incidents from 2–3 per month to fewer than one every two months, and pipeline maintenance from 1–2 days/week to a few hours.</li>
     <li>Own technical delivery practices: CI/CD via GitHub Actions for all platform workloads (Spark pipelines and dbt models), release readiness and UAT coordination with stakeholders, and runbooks for support readiness. Defined data contracts, quality standards, and SLAs across teams.</li>
     <li>Own security and compliance by design: column-level PII masking at ingest (BigQuery policies), GDPR right-to-erasure across Iceberg tables and snapshots, and cloud resources, IAM, and secrets managed as Infrastructure-as-Code via Terraform with PR review. End-to-end data lineage and metadata via dbt and GCP-native lineage tracking; partnered with security engineers on SOC 2 compliance for the analytics layer.</li>
-    <li>Drove a platform-wide cost program spanning BigQuery optimization and the Iceberg migration, lowering monthly spend ~60% (¥1.2M → under ¥500K).</li>
-    <li>Optimized BigQuery workloads using system tables and billing exports — partitioning, clustering, and gold-layer star-schema modeling (dim_/fact_ tables). Reduced query runtime by up to 90% and scan volume by 80%.</li>
-    <li>Delivered end-to-end a FinOps &amp; observability application on GKE (Kubernetes): daily cost collection across all GCP projects, expensive-query and cache-miss alerts, BigQuery freshness and quota alerts, pipeline summaries, and a central observability dashboard.</li>
-    <li>Designed a custom MCP server — a governed data-access API for AI-assisted analytics on BigQuery: schema discovery, plain-language querying of business metrics, restricted to gold tables via a security layer. Now extending it into active cost governance with dry-run cost gating and a read-only optimization advisor.</li>
+    <li>Drove a platform-wide cost program spanning BigQuery optimization and the Iceberg migration, lowering monthly spend by ~60% (from ¥1.2M to under ¥500K).</li>
+    <li>Optimized BigQuery workloads using system tables and billing exports: partitioning, clustering, and gold-layer star-schema modeling (dim_/fact_ tables). Reduced query runtime by up to 90% and scan volume by 80%.</li>
+    <li>Delivered an end-to-end FinOps &amp; observability application on GKE (Kubernetes): daily cost collection across all GCP projects, expensive-query and cache-miss alerts, BigQuery freshness and quota alerts, pipeline summaries, and a central observability dashboard.</li>
+    <li>Designed a custom MCP server, a governed data-access API for AI-assisted analytics on BigQuery, providing schema discovery, plain-language querying of business metrics, restricted to gold tables via a security layer. Now extending it into active cost governance with dry-run cost gating and a read-only optimization advisor.</li>
     <li>Mentor engineers and drive reuse of platform patterns to reduce technical debt.</li>
   </ul>
 </div>
 
 <div class="job nobreak">
-  <div class="job-head"><h3>Pathao Ltd — Dhaka, Bangladesh</h3><span class="dates">Jun 2018 – May 2021</span></div>
+  <div class="job-head"><h3>Pathao Ltd · Dhaka, Bangladesh</h3><span class="dates">Jun 2018 – May 2021</span></div>
   <div class="org">Senior Data Engineer Level 2</div>
   <ul>
-    <li>Designed and operated batch and near-real-time telemetry pipelines (trip lifecycle, GPS location streams, driver/rider actions) for a logistics network handling 100K+ daily trips across courier delivery, ride-sharing, and food delivery — spanning multiple cities across Bangladesh and Nepal.</li>
+    <li>Designed and operated batch and near-real-time telemetry pipelines (trip lifecycle, GPS location streams, driver/rider actions) for a logistics network handling 100K+ daily trips across courier delivery, ride-sharing, and food delivery, spanning multiple cities across Bangladesh and Nepal.</li>
     <li>Implemented data pipelines integrating transaction data from 20+ sources plus streaming data at high volume (~50 GB/day) and velocity (peaks of 10K events/sec) on Spark, Dataflow, GCS, and Airflow.</li>
     <li>Created the metrics framework computing 100+ operational and financial KPIs (driver earnings, leaderboards, fleet and delivery operations) with under-5-minute end-to-end latency.</li>
-    <li>Spearheaded the company's data lake and 10 TB BigQuery data warehouse on Google Cloud Storage, halving data retrieval times.</li>
+    <li>Spearheaded the company's data lake on Google Cloud Storage and 10 TB BigQuery data warehouse, halving data retrieval times.</li>
     <li>Established the analytics ecosystem on Dataproc, Dataflow, BigQuery, and Data Studio, and delivered a scheduled reporting framework generating 10+ financial and operational reports for business stakeholders.</li>
   </ul>
 </div>
 
 <div class="job nobreak">
-  <div class="job-head"><h3>Augmedix Bangladesh Ltd. — Dhaka, Bangladesh</h3><span class="dates">Jun 2015 – Mar 2018</span></div>
+  <div class="job-head"><h3>Augmedix Bangladesh Ltd. · Dhaka, Bangladesh</h3><span class="dates">Jun 2015 – Mar 2018</span></div>
   <div class="org">Senior Data Engineer</div>
   <ul>
     <li>Core contributor to the design and build of a SQL Server 2016 data warehouse on AWS (S3-backed storage) supporting company-wide business reporting.</li>
     <li>Developed AWS data pipelines (S3, Lambda) consolidating data from third-party APIs, Google Sheets, and MySQL (100+ attributes), and a reporting suite producing 20+ operational reports.</li>
-    <li>Delivered backend services and APIs serving millions of warehouse records to internal web applications — owning quality across the API and data layers.</li>
+    <li>Delivered backend services and APIs serving millions of warehouse records to internal web applications, owning quality across the API and data layers.</li>
   </ul>
 </div>
 
 <div class="job nobreak">
-  <div class="job-head"><h3>Nascenia Ltd — Dhaka, Bangladesh</h3><span class="dates">Jun 2013 – May 2015</span></div>
+  <div class="job-head"><h3>Nascenia Ltd · Dhaka, Bangladesh</h3><span class="dates">Jun 2013 – May 2015</span></div>
   <div class="org">Software Engineer</div>
   <ul>
     <li>Launched a B2B agricultural marketplace platform with Ruby on Rails and MySQL.</li>
@@ -112,7 +112,7 @@
 </div>
 
 <div class="job nobreak">
-  <div class="job-head"><h3>Right Brain Solution Ltd — Dhaka, Bangladesh</h3><span class="dates">Nov 2011 – May 2013</span></div>
+  <div class="job-head"><h3>Right Brain Solution Ltd · Dhaka, Bangladesh</h3><span class="dates">Nov 2011 – May 2013</span></div>
   <div class="org">Software Engineer</div>
   <ul>
     <li>Co-authored a high-traffic automotive web portal for the Toronto Star.</li>
@@ -120,19 +120,19 @@
   </ul>
 </div>
 
-<p class="earlier"><strong>Earlier roles:</strong> Assistant Programmer, Nanosoft (2011) — PHP/MySQL appointment scheduling · Software Developer, Sitebloom (2010–2011) — CodeIgniter school management system.</p>
+<p class="earlier"><strong>Earlier roles:</strong> Assistant Programmer, Nanosoft (2011): PHP/MySQL appointment scheduling · Software Developer, Sitebloom (2010–2011): CodeIgniter school management system.</p>
 
 <h2>Languages</h2>
-<p>English — full professional proficiency · Japanese — beginner, actively studying (Genki I)</p>
+<p>English: full professional proficiency · Japanese: beginner, actively studying (Genki I)</p>
 
 <h2>Education</h2>
-<div class="job-head"><h3>IICT, BUET — Post Graduate Diploma in ICT</h3><span class="dates">2019</span></div>
-<div class="job-head"><h3>Jagannath University — B.Sc in Physics</h3><span class="dates">2008</span></div>
+<div class="job-head"><h3>IICT, BUET · Post Graduate Diploma in ICT</h3><span class="dates">2019</span></div>
+<div class="job-head"><h3>Jagannath University · B.Sc in Physics</h3><span class="dates">2008</span></div>
 
 <h2>Certifications</h2>
 <ul>
-  <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MQRYP6DEBYBE">Data Engineering with Google Cloud Specialization</a> — Google Cloud Training, Coursera (2023)</li>
-  <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/AAQ4TJYJCSDY">Data Engineering, Big Data, and Machine Learning on GCP Specialization</a> — Google Cloud Training, Coursera (2023)</li>
+  <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MQRYP6DEBYBE">Data Engineering with Google Cloud Specialization</a>, Google Cloud Training, Coursera (2023)</li>
+  <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/AAQ4TJYJCSDY">Data Engineering, Big Data, and Machine Learning on GCP Specialization</a>, Google Cloud Training, Coursera (2023)</li>
 </ul>
 
 </body>

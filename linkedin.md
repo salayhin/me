@@ -1,21 +1,24 @@
 # LinkedIn Profile — Source of Truth
 
-> Brand is deliberately different from the résumé (`resume/resume.html`) and that split is intentional.
-> Résumé leads with **Staff Data Platform Engineer**; LinkedIn leads with the hybrid
-> **Data Platform Architect** (leans toward Head of Data). Same verified metrics back both. Keep in sync.
+> Positioning is aligned with the résumé (`resume/resume.html`): **Data Platform Architect** —
+> solution architecture, design standards and reviews, end-to-end delivery ownership, backend
+> engineering roots, and large-scale cloud data platforms. Same verified facts and metrics back both.
+> Web-application language is deliberately kept light. Keep in sync with `resume/resume.html`.
 
----
 
-## Headline (mobile-optimized, ~92 chars — front-loads essentials before mobile truncation)
 
-```
-Data Platform Architect · Scalable Data Platforms on GCP & AWS · Security, Governance & FinOps
-```
+## Headline
 
-*Longer keyword-rich alternative (135 chars, desktop) — swap in if you want dbt/Iceberg/AI search terms:*
+Mobile-optimized (~95 chars — essentials survive truncation):
 
 ```
-Data Platform Architect · Scalable Lakehouse Platforms on GCP & AWS · dbt · Iceberg · Security, Governance & FinOps · AI/LLM-Ready Data
+Data Platform Architect · Solution Architecture & Data Engineering · Cloud Data Platforms at Scale
+```
+
+Longer keyword-rich alternative (desktop, ~150 chars):
+
+```
+Data Platform Architect · Solution Architecture & Data Engineering · Large-Scale Cloud Data Platforms · Lakehouse · dbt · Security & Governance
 ```
 
 ---
@@ -25,22 +28,20 @@ Data Platform Architect · Scalable Lakehouse Platforms on GCP & AWS · dbt · I
 Data Platform Architect
 Sole architect and primary technical decision-maker for a company-wide data platform.
 
-I architect and run the data platform other teams build on. For 15+ years I've worked at the convergence of Data Engineering, Platform Engineering, and Data Security & Governance — making the architectural trade-offs that balance engineering velocity, cloud cost, and data risk.
+I design and deliver the data platforms other teams build on. Over 15+ years I've moved from backend engineering into large-scale cloud data platforms — and today I own the full arc: translating stakeholder requirements into technical specifications, setting target architecture and design standards, and carrying delivery from design through release and run, with security and compliance designed in from day one.
 
-I drive execution across three core pillars:
+Three areas I drive:
 
-▪ Data Engineering & Architecture
-I design and operate a production Apache Iceberg lakehouse on GCP (GCS + BigLake Metastore, dual-engine BigQuery and Spark on Dataproc), fed by near-real-time Scala/Spark telemetry pipelines from Pub/Sub and orchestrated end-to-end on Cloud Composer (Airflow). I've done this at scale before — 100K+ daily trips at Pathao — turning raw, high-volume event streams into reliable data products that power analytics, ML, and business strategy, with analytics engineers self-serving on a governed dbt modeling layer.
+▪ Solution Architecture & Delivery
+I define target architectures and write the design documents behind them — HLD-style proposals, architecture decision records, non-functional requirements — and lead the architecture and design reviews that keep a platform coherent as it grows. Delivery is owned end-to-end: CI/CD for every workload (Spark pipelines and dbt models alike, via GitHub Actions), release readiness and UAT coordination with stakeholders, runbooks and operational documentation for support readiness, and data contracts, quality standards, and SLAs agreed across teams.
 
-▪ Platform Engineering & FinOps
-I build the scalable, observable, automated foundations that power the entire data lifecycle — cloud-native environments provisioned as Infrastructure-as-Code (Terraform), CI/CD for every workload from Spark pipelines to dbt models (GitHub Actions), orchestration, and observability — with FinOps treated as a first-class concern. My most recent cost program cut platform spend ~60% (¥1.2M → under ¥500K), and dbt-driven testing cut data incidents reaching stakeholders from 2–3/month to under one every two months. I also run the BI layer (Tableau, Redash) as platform-managed services.
+▪ Data Engineering at Scale
+I architected and operate a production Apache Iceberg lakehouse on GCP (GCS + BigLake Metastore, queried by both BigQuery and Spark on Dataproc), fed by Scala/Spark pipelines ingesting ~100 GB/day (peaks ~1 TB) of protobuf events from Pub/Sub and orchestrated end-to-end on Cloud Composer (Airflow). dbt Cloud is the platform's modeling and semantic/metrics layer, where analytics engineers build and own their models. I've done this at scale before — 100K+ daily trips at Pathao — turning high-volume event streams into reliable data products for analytics, ML, and BI. Outcomes I can stand behind: a platform-wide cost program that cut monthly spend ~60% (¥1.2M → under ¥500K), stakeholder-facing data incidents reduced from 2–3 per month to fewer than one every two months, and pipeline maintenance down from 1–2 days a week to a few hours.
 
-▪ Data Security & Strategic Governance
-I embed compliance and access control into the platform fabric: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, IAM-as-code in Terraform, end-to-end data lineage and metadata, and SOC 2 support. I extend this to the AI layer — I designed a custom MCP server so LLM applications can query business metrics safely, governed down to curated gold tables, and I'm now extending it into active cost governance (dry-run cost gating with confirm-to-override, plus a read-only advisor surfacing recurring expensive query patterns). Security and governance as structural enablers, not operational constraints.
+▪ Security, Governance & FinOps by Design
+Compliance and access control live in the platform fabric, not in a checklist: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg tables and snapshots, cloud resources, IAM, and secrets managed as Infrastructure-as-Code in Terraform, end-to-end lineage and metadata, and SOC 2 support. A FinOps and observability application on GKE gives the platform daily cost visibility, expensive-query and freshness alerting, and a central dashboard. I extended the same governance to the AI layer with a custom MCP server — a governed data-access API that lets LLM applications query business metrics safely, restricted to curated gold tables — and I'm now extending it into active cost governance (dry-run cost gating and a read-only optimization advisor).
 
-A modern platform must treat data as a true product — highly scalable, observable, and cost-efficient, with security, governance, and developer empathy baked into the architecture from day one. I thrive on owning complex data roadmaps, solving hard scalability problems, and driving technical excellence across GCP and AWS.
-
-Let's connect to exchange ideas on modern data strategy, platform engineering, or data governance.
+I believe a modern platform must treat data as a product — scalable, observable, cost-efficient, and secure by design — and that the architect's job is to make the trade-offs explicit, write them down, and see them through to production. Open to conversations on solution architecture, data platform strategy, and governance.
 
 ---
 
@@ -51,21 +52,22 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 
 #### Staff Data Platform Engineer · Permanent · Nov 2023 – Present · Tokyo, Japan · On-site
 
-- Own the technical direction of the data platform as sole architect and primary decision-maker for architecture, tooling choices, and scalability trade-offs.
-- Architected and operate a production Apache Iceberg lakehouse on GCP (GCS + BigLake, dual-engine BigQuery + Spark on Dataproc) serving analytics, ML, and BI.
-- Led adoption of dbt with CI/CD, testing, and documentation standards across data teams — cutting data incidents reaching stakeholders from 2–3/month to under one every two months.
-- Drove a platform-wide FinOps and cost program (BigQuery optimization + Iceberg migration), lowering monthly cloud spend ~60% (¥1.2M → under ¥500K) while improving performance.
-- Established platform governance and security: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, IAM-as-code in Terraform, and SOC 2 support.
-- Designed a custom MCP server for governed, AI-assisted analytics on BigQuery, now extending it into active cost governance (dry-run cost gating, expensive-query advisor); championed AI adoption and mentored junior engineers.
+- Sole architect and primary technical decision-maker for the company-wide data platform used by analytics, ML, and BI teams; operate the BI layer (Tableau, Redash) as platform-managed services.
+- Translate stakeholder requirements into technical specifications; author design documents (HLD-style proposals, architecture decision records) and platform standards, and lead architecture and design reviews.
+- Own technical delivery practices: release readiness and UAT coordination with stakeholders, runbooks and operational documentation for support readiness, and data contracts, quality standards, and SLAs agreed across teams.
+- Led adoption of dbt Cloud as the platform's modeling and semantic/metrics layer — analytics engineers now build and own models — reducing stakeholder-facing data incidents from 2–3 per month to fewer than one every two months, and pipeline maintenance from 1–2 days/week to a few hours.
+- Drove a platform-wide cost program (BigQuery optimization + Iceberg migration), lowering monthly cloud spend ~60% (¥1.2M → under ¥500K) while improving performance.
+- Own security and compliance by design: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, cloud resources, IAM, and secrets as Infrastructure-as-Code in Terraform, and SOC 2 support.
+- Designed a custom MCP server — a governed data-access API for AI-assisted analytics on BigQuery — now extending it into active cost governance (dry-run cost gating, read-only optimization advisor); coach engineers through design reviews and mentoring.
 
 #### Senior Data Platform Engineer · Permanent · Nov 2022 – Oct 2023 · Tokyo, Japan · On-site
 
-- Built the platform's core pipeline framework — a Docker- and script-driven system that provisions and manages ephemeral Dataproc clusters — running Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf event streams from Pub/Sub through medallion (bronze → gold) layers, orchestrated end-to-end on Cloud Composer (Airflow).
+- Defined and delivered the target architecture: a production Apache Iceberg lakehouse on GCS (BigLake Metastore), queried by both BigQuery and Spark on Dataproc — selected on documented trade-offs of cost, multi-engine reads without duplication, and protobuf schema evolution.
+- Built the platform's core pipeline framework — a Docker- and script-driven system that provisions ephemeral Dataproc clusters — running Scala/Spark ingestion of ~100 GB/day (peaks ~1 TB) of protobuf events from Pub/Sub through medallion (bronze → gold) layers, orchestrated end-to-end on Cloud Composer (Airflow).
 - Established data contracts, quality standards, BigQuery audit logging, and end-to-end data lineage & metadata (dbt + GCP-native) to strengthen governance and compliance across analytics datasets.
-- Deployed CI/CD with Terraform (infrastructure-as-code) and GitHub Actions across Spark pipelines and dbt models, improving reliability and reducing manual operational toil.
-- Developed the FinOps tooling on GKE — daily cost collection across GCP projects with billing-based actuals and expensive-query alerts — that underpinned the platform-wide cost program.
-- Built a semantic gold layer (star-schema dim/fact modeling) powering a customer-facing analytics dashboard.
-- Integrated BI tools (Tableau) with the lakehouse gold layer to enable near-real-time business insights for stakeholders.
+- Standardized CI/CD with Terraform (Infrastructure-as-Code) and GitHub Actions across Spark pipelines and dbt models, improving reliability and reducing manual operational toil.
+- Delivered end-to-end the FinOps & observability application on GKE — daily cost collection across GCP projects, expensive-query and cache-miss alerts, freshness and quota alerts, and a central dashboard — that underpinned the platform-wide cost program.
+- Built the gold star-schema layer (dim/fact modeling) and integrated BI tools (Tableau) with it to enable near-real-time business insights for stakeholders.
 
 #### Senior Data & Infrastructure Engineer (Remote) · Full-time · Apr 2021 – Oct 2022 · Dhaka, Bangladesh · Remote
 
@@ -76,18 +78,18 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 ### Pathao Ltd — Dhaka, Bangladesh
 **Senior Data Engineer, Level 2** · Jun 2018 – May 2021
 
-- Designed and operated batch and near-real-time telemetry pipelines (trip lifecycle, GPS location streams, driver/rider actions) for 100K+ daily trips across ride-sharing, courier, and food delivery — spanning multiple cities in Bangladesh and Nepal.
+- Designed and operated batch and near-real-time telemetry pipelines (trip lifecycle, GPS location streams, driver/rider actions) for a logistics network handling 100K+ daily trips across courier delivery, ride-sharing, and food delivery — spanning multiple cities in Bangladesh and Nepal.
 - Built pipelines integrating 20+ transactional sources plus high-volume streaming (~50 GB/day, peaks of 10K events/sec) on Spark, Dataflow, GCS, and Airflow.
-- Created the metrics framework computing 100+ business KPIs (driver earnings, leaderboards, operational metrics) with under-5-minute end-to-end latency.
+- Created the metrics framework computing 100+ operational and financial KPIs (driver earnings, leaderboards, fleet and delivery operations) with under-5-minute end-to-end latency.
 - Spearheaded the company's data lake and 10 TB BigQuery data warehouse on Google Cloud Storage, halving data-retrieval times.
-- Established the analytics ecosystem on Dataproc, Dataflow, BigQuery, and Data Studio, and delivered a scheduled reporting framework generating 10+ financial and operational reports.
+- Established the analytics ecosystem on Dataproc, Dataflow, BigQuery, and Data Studio, and delivered a scheduled reporting framework generating 10+ financial and operational reports for business stakeholders.
 
 ### Augmedix Bangladesh Ltd. — Dhaka, Bangladesh
 **Senior Data Engineer** · Jun 2015 – Mar 2018
 
 - Core contributor to the design and build of a SQL Server 2016 data warehouse on AWS (S3-backed storage) supporting company-wide business reporting.
 - Developed AWS data pipelines (S3, Lambda) consolidating data from third-party APIs, Google Sheets, and MySQL (100+ attributes), plus a reporting suite producing 20+ operational reports.
-- Delivered backend services serving millions of warehouse records to internal applications.
+- Delivered backend services and APIs serving millions of warehouse records to internal applications, owning quality across the API and data layers.
 
 ### Nascenia Ltd — Dhaka, Bangladesh
 **Software Engineer** · Jun 2013 – May 2015
@@ -107,7 +109,16 @@ Let's connect to exchange ideas on modern data strategy, platform engineering, o
 
 ---
 
-## Featured / Notes
+## Skills section (LinkedIn "Skills" — top 5 pinned first)
 
-- **AWS note:** production AWS is S3 + Lambda (Augmedix); S3 Tables (Iceberg), Athena, Glue Catalog, and DynamoDB are hands-on **personal projects** exploring Iceberg-on-AWS — present them that way if asked.
-- **Interview-probe readiness:** "up to 90%" query improvement (be ready with median vs. best-case); GDPR erasure mechanics on Iceberg snapshots (rewrite vs. snapshot expiry); "sole architect" scope (6-person data org, design reviews, mentoring — depth not headcount).
+Pinned: Solution Architecture · Data Architecture · Data Engineering · Apache Spark · Google Cloud Platform
+
+Then: Apache Iceberg · dbt · Data Modeling · Apache Airflow · BigQuery · Terraform · CI/CD · Kubernetes · Data Governance · Data Security · FinOps · Python · Scala · SQL · Backend Development · API Design · AWS
+
+---
+
+## Notes
+
+- **Attribution rule kept:** the pipeline framework, Iceberg target architecture, CI/CD, lineage, and GKE observability work stay under **Senior Data Platform Engineer** (built then, extended as Staff).
+- **Honesty guardrails kept:** no "Leader"/people-management claims; "sole architect" = depth in a 6-person data org; MCP verb is "Designed"; AWS beyond S3/Lambda is personal projects; no Azure, Power Platform, or SAP; Japanese stays beginner.
+- **Interview-probe readiness:** "up to 90%" query improvement (median vs. best-case); GDPR erasure mechanics on Iceberg snapshots; "runbooks" — be ready to show an operational procedure, not just a README; "semantic layer" — dbt metrics/semantic layer specifics.

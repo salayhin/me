@@ -54,10 +54,10 @@ I believe a modern platform must treat data as a product — scalable, observabl
 
 - Sole architect and primary technical decision-maker for the company-wide data platform used by analytics, ML, and BI teams; operate the BI layer (Tableau, Redash) as platform-managed services.
 - Translate stakeholder requirements into technical specifications; author design documents (HLD-style proposals, architecture decision records) and platform standards, and lead architecture and design reviews.
-- Own technical delivery practices: release readiness and UAT coordination with stakeholders, runbooks and operational documentation for support readiness, and data contracts, quality standards, and SLAs agreed across teams.
 - Led adoption of dbt Cloud as the platform's modeling and semantic/metrics layer — analytics engineers now build and own models — reducing stakeholder-facing data incidents from 2–3 per month to fewer than one every two months, and pipeline maintenance from 1–2 days/week to a few hours.
-- Drove a platform-wide cost program (BigQuery optimization + Iceberg migration), lowering monthly cloud spend ~60% (¥1.2M → under ¥500K) while improving performance.
+- Own technical delivery practices: release readiness and UAT coordination with stakeholders, runbooks and operational documentation for support readiness, and data contracts, quality standards, and SLAs agreed across teams.
 - Own security and compliance by design: column-level PII masking at ingest, GDPR right-to-erasure across Iceberg, cloud resources, IAM, and secrets as Infrastructure-as-Code in Terraform, and SOC 2 support.
+- Drove a platform-wide cost program (BigQuery optimization + Iceberg migration), lowering monthly cloud spend ~60% (¥1.2M → under ¥500K) while improving performance.
 - Designed a custom MCP server — a governed data-access API for AI-assisted analytics on BigQuery — now extending it into active cost governance (dry-run cost gating, read-only optimization advisor); mentor engineers and drive reuse of platform patterns to reduce technical debt.
 
 #### Senior Data Platform Engineer · Permanent · Nov 2022 – Oct 2023 · Tokyo, Japan · On-site
